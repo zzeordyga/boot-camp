@@ -15,5 +15,15 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Averina Nurdin",
+    "nim": "2501981560",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "favoriteFood" : "Ice Cream"
+    }
   }
+
 ]

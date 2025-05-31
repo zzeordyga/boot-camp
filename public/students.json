@@ -6,5 +6,12 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
-  }
+  },
+  { 
+    "name": "Yoko Hermanto",
+    "nim": "2501967783",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Vue"}
+    }
 ]

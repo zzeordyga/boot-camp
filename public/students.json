@@ -6,5 +6,16 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Muhammad Diva Illyas",
+    "nim": "2301948624",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": ["Python", "JavaScript"],
+      "frameworks": ["React", "Vue", "Next.js"],
+      "versionControl": ["Git", "GitHub"],
+      "cssTechnologies": ["Tailwind CSS", "Bootstrap"]
+    }
   }
 ]

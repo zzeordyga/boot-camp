@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Priscilla Jessica",
+    "nim": "2440070352",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "nickName": "Priscilla",
+      "favoriteLanguage": "CSS"
+    }
   }
 ]

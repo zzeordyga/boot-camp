@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Theofilus G.M.S.",
+    "nim": "2440111573",
+    "studyProgram": "Game Application and Technology",
+    "additionalData": {
+      "favoriteLanguage": "C#"
+    }
   }
 ]

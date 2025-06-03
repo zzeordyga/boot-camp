@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Vincentius Justine Gozali",
+    "nim": "2540120692",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Golang"
+    }
   }
 ]

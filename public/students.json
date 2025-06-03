@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Claudya Salim",
+    "nim": "2502006341",
+    "studyProgram": "Mobile Application and Technology",
+    "additionalData": {
+      "favoriteLanguage": "Java"
+    }
   }
 ]

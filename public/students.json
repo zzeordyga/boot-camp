@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Febrian Surya Hartono",
+    "nim": "2540118851",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "funFact": "Sloths can hold their breath longer than dolphins."
+    }
   }
 ]

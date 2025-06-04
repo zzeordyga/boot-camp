@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Walid Fernando Sastriana",
+    "nim": "2502027232",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, JS"
+    }
   }
 ]

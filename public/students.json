@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Valent Setiawan",
+    "nim": "2440075523",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Python"
+    }
   }
 ]

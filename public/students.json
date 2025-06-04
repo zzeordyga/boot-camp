@@ -7,13 +7,23 @@
       "favoriteLanguage": "JavaScript"
     }
   },
-  
+
   {
     "name": "Charles Yansen",
     "nim": "2501978843",
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"
+    }
+  },
+
+  {
+    "name": "Jahnsen",
+    "nim": "2540119495",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "hobbies": ["Coding", "Gaming", "Reading tech blogs"]
     }
   }
 ]

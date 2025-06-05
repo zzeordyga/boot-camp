@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Angeline Despiadi",
+    "nim": "2540127383",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "PHP"
+    }
   }
 ]

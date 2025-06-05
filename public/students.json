@@ -15,5 +15,13 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Owen Farida",
+    "nim": "2501989462",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Ruby"
+    }
   }
 ]

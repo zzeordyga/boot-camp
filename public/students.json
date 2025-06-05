@@ -16,4 +16,13 @@
       "favoriteLanguage": "JavaScript"
     }
   }
+
+    {
+    "name": "Michelle Valencia",
+    "nim": "2501959775",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Ruby"
+    }
+  }
 ]

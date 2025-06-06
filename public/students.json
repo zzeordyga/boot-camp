@@ -16,4 +16,13 @@
       "favoriteLanguage": "JavaScript"
     }
   }
+
+  {
+    "name": "Imanuel Eklesio",
+    "nim": "2440044190",
+    "studyProgram": "Computer Science",
+    "additionalData":{
+      "favoriteLanguage": "C#"
+    }
+  }
 ]

@@ -9,11 +9,13 @@
   },
   
   {
-    "name": "Charles Yansen",
-    "nim": "2501978843",
+    "name": "Nursechan Arya Pamungkas",
+    "nim": "2501985483",
     "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "JavaScript",
+      "catsNames" : "Max, Cream and Cookie",
+      "favoriteMovie": "Star Wars Episode V : Empire Strikes Back" 
     }
   }
 ]

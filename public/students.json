@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Vincent",
+    "nim": "2501992343",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "gurt": "yo"
+    }
   }
 ]

@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Edward Wijaya",
+    "nim": "2540125434",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "PHP"
+    }
   }
 ]

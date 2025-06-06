@@ -15,5 +15,15 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  
+  {
+    "name": "William Wijaya",
+    "nim": "2502010995",
+    "studyProgram": "Game Application and Technology",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+	    "hobby": "Playing Game"
+    }
   }
 ]

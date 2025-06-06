@@ -15,5 +15,15 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
-  }
+  },
+  
+  {
+    "name": "Roland Ramadan",
+    "nim": "2501980633",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "currentBootCamp": "Binus Bootcamp",
+      "currentEmployment": "Unemployed"
+    }
+  },
 ]

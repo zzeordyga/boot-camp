@@ -15,5 +15,16 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+  "name": "Colliens Edward Susanto",
+  "nim" : "2540130296",
+  "studyProgram": "Computer Science",
+  "university": "BINUS University",
+  "batch": "2025",
+  "interests": ["Web Development", "UI/UX"],
+  "additionalData": {
+    "quote": "Work hard in silence, let success make the noise."
+   }
   }
 ]

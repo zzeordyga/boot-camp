@@ -15,5 +15,16 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
-  }
+  },
+
+  {
+    "name": "Gilang Muhammad Prathama",
+    "nim" : "2440011961",
+    "studyProgram" : "Computer Science",
+    "additionalData": {
+        "hobbies": ["reading", "coding"],
+        "favoriteLanguage": ["Python", "JavaScript"]
+    }
+  }    
+
 ]

@@ -15,5 +15,15 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Your Full Name",
+    "nim": "Your Student ID (NIM)",
+    "studyProgram": "Your Study Program",
+    "additionalData": {
+        "hobby": "Gaming",
+        "linkedin": "https://linkedin.com/in/yourprofile"
+    }
   }
 ]

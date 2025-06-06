@@ -15,5 +15,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+
+  {
+    "name": "Rahma Putri Laura Marvialdi",
+    "nim": "2502013492",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Next.js"
+    }
   }
 ]

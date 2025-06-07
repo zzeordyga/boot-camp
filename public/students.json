@@ -15,5 +15,13 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Vincent Hungadi",
+    "nim": "2502012804",
+    "studyProgram": "Game Application and Technology",
+    "additionalData": {
+      "favoriteLanguage": "C#"
+    }
   }
 ]

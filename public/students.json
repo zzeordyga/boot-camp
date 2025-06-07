@@ -15,5 +15,13 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+   {
+    "name": "Raymond",
+    "nim": "Raymond",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
   }
 ]

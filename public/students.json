@@ -1,11 +1,31 @@
 [
   {
-    "name": "Ziggy Z.",
-    "nim": "2101702761",
-    "studyProgram": "Computer Science",
-    "additionalData": {
-      "favoriteLanguage": "JavaScript"
-    }
+      "name": "Ziggy Z.",
+      "nim": "2101702761",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": "JavaScript"
+      }
+  },
+  {
+      "name": "Charles Yansen",
+      "nim": "2501978843",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": "JavaScript"
+      }
+  },
+  {
+      "name": "Owen Maha Putra",
+      "nim": "2502000363",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": [
+              "JavaScript",
+              "SQL"
+          ],
+          "favoriteColor": "Blue"
+      }
   },
   {
     "name": "Barakhyel Agustorio Gulo",

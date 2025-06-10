@@ -25,6 +25,15 @@
     }
   },
   {
+    "name": "Averina Nurdin",
+    "nim": "2501981560",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "favoriteFood" : "Ice Cream"
+    }
+  },
+  {
     "name": "Devani Marcellina Calista",
     "nim": "2540124570",
     "studyProgram": "Computer Science",

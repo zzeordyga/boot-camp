@@ -10,6 +10,15 @@
   {
     "name": "Barakhyel Agustorio Gulo",
     "nim": "2502047644",
+  
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Charles Yansen",
+    "nim": "2501978843",
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"

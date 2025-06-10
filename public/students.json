@@ -1,30 +1,72 @@
 [
-    {
-        "name": "Ziggy Z.",
-        "nim": "2101702761",
-        "studyProgram": "Computer Science",
-        "additionalData": {
-            "favoriteLanguage": "JavaScript"
-        }
-    },
-    {
-        "name": "Charles Yansen",
-        "nim": "2501978843",
-        "studyProgram": "Computer Science",
-        "additionalData": {
-            "favoriteLanguage": "JavaScript"
-        }
-    },
-    {
-        "name": "Owen Maha Putra",
-        "nim": "2502000363",
-        "studyProgram": "Computer Science",
-        "additionalData": {
-            "favoriteLanguage": [
-                "JavaScript",
-                "SQL"
-            ],
-            "favoriteColor": "Blue"
-        }
+  {
+      "name": "Ziggy Z.",
+      "nim": "2101702761",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": "JavaScript"
+      }
+  },
+  {
+      "name": "Charles Yansen",
+      "nim": "2501978843",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": "JavaScript"
+      }
+  },
+  {
+      "name": "Owen Maha Putra",
+      "nim": "2502000363",
+      "studyProgram": "Computer Science",
+      "additionalData": {
+          "favoriteLanguage": [
+              "JavaScript",
+              "SQL"
+          ],
+          "favoriteColor": "Blue"
+      }
+  },
+  {
+    "name": "Barakhyel Agustorio Gulo",
+    "nim": "2502047644",
+  
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
     }
+  },
+  {
+    "name": "Charles Yansen",
+    "nim": "2501978843",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Averina Nurdin",
+    "nim": "2501981560",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "favoriteFood" : "Ice Cream"
+    }
+  },
+  {
+    "name": "Devani Marcellina Calista",
+    "nim": "2540124570",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "William Chua",
+    "nim": "2540115540",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Rust"
+    }
+  }
 ]

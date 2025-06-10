@@ -53,6 +53,17 @@
     }
   },
   {
+    "name": "Muhammad Diva Illyas",
+    "nim": "2301948624",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": ["Python", "JavaScript"],
+      "frameworks": ["React", "Vue", "Next.js"],
+      "versionControl": ["Git", "GitHub"],
+      "cssTechnologies": ["Tailwind CSS", "Bootstrap"]
+    }
+  },
+  {
     "name": "Averina Nurdin",
     "nim": "2501981560",
     "studyProgram": "Computer Science",

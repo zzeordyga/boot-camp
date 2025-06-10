@@ -23,5 +23,14 @@
     "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
+  },
+  
+  {
+    "name": "William Chua",
+    "nim": "2540115540",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Rust"
+    }
   }
 ]

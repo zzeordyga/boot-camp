@@ -8,11 +8,14 @@
     }
   },
   {
-    "name": "Ziggy Zu.",
-    "nim": "2101702762",
-    "studyProgram": "Cyber Security",
+    "name": "Muhammad Diva Illyas",
+    "nim": "2301948624",
+    "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": "Golang"
+      "favoriteLanguage": ["Python", "JavaScript"],
+      "frameworks": ["React", "Vue", "Next.js"],
+      "versionControl": ["Git", "GitHub"],
+      "cssTechnologies": ["Tailwind CSS", "Bootstrap"]
     }
   }
 ]

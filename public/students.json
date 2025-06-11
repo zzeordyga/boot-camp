@@ -45,6 +45,14 @@
     }
   },
   {
+    "name": "Valent Setiawan",
+    "nim": "2440075523",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Python"
+    }
+  },
+  {
     "name": "Trixie Theodora",
     "nim": "2501997501",
     "studyProgram": "Computer Science",
@@ -119,7 +127,6 @@
       "favoriteLanguage": "JavaScript"
     }
   },
-  
   {
     "name": "Muhammad Diva Illyas",
     "nim": "2301948624",

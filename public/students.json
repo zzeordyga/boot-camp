@@ -45,6 +45,14 @@
     }
   },
   {
+    "name": "Sekar Ajeng Suprobo Mukti",
+    "nim": "2501979814",
+    "studyProgram": "Computer Science",
+    "additionalData":{
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Claudya Salim",
     "nim": "2502006341",
     "studyProgram": "Mobile Application and Technology",

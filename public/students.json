@@ -45,6 +45,14 @@
     }
   },
   {
+    "name": "Owen Farida",
+    "nim": "2501989462",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Ruby"
+    }
+  },
+  {
     "name": "Valentinus Gilbert Sanjaya",
     "nim": "2540126430",
     "studyProgram": "Computer Science",

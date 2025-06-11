@@ -52,6 +52,14 @@
     }
   },
   {
+    "name": "Nicholas Theodore",
+    "nim": "2502010370",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "William Wijaya",
     "nim": "2502010995",
     "studyProgram": "Game Application and Technology",

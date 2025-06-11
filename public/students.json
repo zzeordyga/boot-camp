@@ -51,6 +51,22 @@
       "favoriteLanguage": "JavaScript"
     }
   },
+   {
+    "name": "Ni Komang Adetiwi Anjani",
+    "nim": "2502029383",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Hobby": "Dancing"
+    }
+  },
+  {
+    "name": "Kim Namjoon",
+    "nim": "19940912",
+    "studyProgram": "Broadcasting & Entertaintment",
+    "additionalData": {
+      "Hobby": "Writing"
+    }
+  },
   {
     "name": "Kevin Sebastian",
     "nim": "2501974050",

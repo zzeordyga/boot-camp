@@ -1,5 +1,13 @@
 [
   {
+    "name": "Bintang Satria Khanafi",
+    "nim": "2540123896",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
       "name": "Ziggy Z.",
       "nim": "2101702761",
       "studyProgram": "Computer Science",
@@ -30,7 +38,6 @@
   {
     "name": "Barakhyel Agustorio Gulo",
     "nim": "2502047644",
-  
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"

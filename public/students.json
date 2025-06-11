@@ -52,6 +52,14 @@
     }
   },
   {
+    "name": "Putra Panca Prasetya",
+    "nim": "2502006726",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Colliens Edward Susanto",
     "nim" : "2540130296",
     "studyProgram": "Computer Science",

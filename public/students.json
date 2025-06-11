@@ -52,6 +52,22 @@
     }
   },
   {
+    "name": "Kevin Sebastian",
+    "nim": "2501974050",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, CSS, SQL, C#, Java & JavaScript"
+    }
+  },
+  {
+    "name": "Natalia Lairan",
+    "nim": "2502023890",
+    "studyProgram": "Global Class - Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, SQL, Python, CSS"
+    }
+  },
+  {
     "name": "Vincent",
     "nim": "2501992343",
     "studyProgram": "Computer Science",

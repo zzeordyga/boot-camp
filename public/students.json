@@ -52,6 +52,14 @@
     }
   },
   {
+    "name": "Vincent",
+    "nim": "2501992343",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "gurt": "yo"
+    }
+  },
+  {
     "name": "Christopher Nathanael",
     "nim": "2540121045",
     "studyProgram": "Computer Science",

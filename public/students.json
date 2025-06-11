@@ -323,5 +323,13 @@
     "name": "Muhammad Al Haddad",
     "nim": "2502024376",
     "studyProgram": "Computer Science"
+  },
+  {
+    "name": "Farah Putri Yusriyah",
+    "nim": "2502023511",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript"
+    }
   }
 ]

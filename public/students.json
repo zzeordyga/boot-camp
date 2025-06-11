@@ -52,6 +52,15 @@
     }
   },
   {
+    "name": "Rafly Irham Safatulloh",
+    "nim": "2501995345",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "favoriteFramework": "Next.js"
+    }
+  },
+  {
     "name": "Raditya Tamam",
     "nim": "2502049353",
     "studyProgram": "Computer Science",

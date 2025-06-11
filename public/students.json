@@ -18,12 +18,11 @@
   },
 
   {
-    "name": "Your Full Name",
-    "nim": "Your Student ID (NIM)",
-    "studyProgram": "Your Study Program",
+    "name": "Fabrian Osmond",
+    "nim": "2501964390",
+    "studyProgram": "Computer Science",
     "additionalData": {
-        "hobby": "Gaming",
-        "linkedin": "https://linkedin.com/in/yourprofile"
+        "favoriteLanguage": "JavaScript"
     }
   }
 ]

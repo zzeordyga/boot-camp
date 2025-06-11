@@ -45,6 +45,14 @@
     }
   },
   {
+    "name": "Angeline Despiadi",
+    "nim": "2540127383",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "PHP"
+    }
+  },
+  {
     "name": "Owen Farida",
     "nim": "2501989462",
     "studyProgram": "Computer Science",

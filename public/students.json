@@ -45,6 +45,15 @@
     }
   },
   {
+    "name": "Jahnsen",
+    "nim": "2540119495",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "hobbies": ["Coding", "Gaming", "Reading tech blogs"]
+    }
+  },
+  {
     "name": "Febrian Surya Hartono",
     "nim": "2540118851",
     "studyProgram": "Computer Science",

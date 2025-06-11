@@ -52,6 +52,15 @@
     }
   },
   {
+    "name": "Roland Ramadan",
+    "nim": "2501980633",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "currentBootCamp": "Binus Bootcamp",
+      "currentEmployment": "Unemployed"
+    }
+  },
+  {
     "name": "Edward Wijaya",
     "nim": "2540125434",
     "studyProgram": "Computer Science",

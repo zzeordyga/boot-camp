@@ -60,6 +60,14 @@
     }
   },
   {
+    "name": "Michael Surya",
+    "nim": "2501995912",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
 	"name": "Ryan Bukhari",
 	"nim": "2401953436",
 	"studyProgram": "Computer Science",

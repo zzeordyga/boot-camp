@@ -60,6 +60,14 @@
     }
   },
   {
+    "name": "Andi Mataraja",
+    "nim": "2540124324", 
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Rahma Putri Laura Marvialdi",
     "nim": "2502013492",
     "studyProgram": "Computer Science",

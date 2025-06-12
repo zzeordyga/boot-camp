@@ -60,9 +60,17 @@
     }
   },
   {
+    "name": "Safira SS",
+    "nim": "2501992854",
+    
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Erwin Indrawan",
     "nim": "2502002551",
-    
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"

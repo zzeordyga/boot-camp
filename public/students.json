@@ -451,6 +451,14 @@
     }
   },
   {
+    "name": "Yoko Hermanto",
+    "nim": "2501967783",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Python"
+    }
+  },
+  {
     "name": "Imanuel Eklesio",
     "nim": "2440044190",
     "studyProgram": "Computer Science",

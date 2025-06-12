@@ -60,6 +60,14 @@
     }
   },
   {
+    "name": "Darul Riyanto",
+    "nim": "2501994790",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Vincent Hungadi",
     "nim": "2502012804",
     "studyProgram": "Game Application and Technology",

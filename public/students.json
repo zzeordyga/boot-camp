@@ -60,6 +60,15 @@
     }
   },
   {
+    "name": "Erwin Indrawan",
+    "nim": "2502002551",
+    
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Andi Mataraja",
     "nim": "2540124324", 
     "studyProgram": "Computer Science",

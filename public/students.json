@@ -60,6 +60,14 @@
     }
   },
   {
+    "name": "Fabrian Osmond",
+    "nim": "2501964390",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Darul Riyanto",
     "nim": "2501994790",
     "studyProgram": "Computer Science",

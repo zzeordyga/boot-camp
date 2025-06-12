@@ -60,6 +60,14 @@
     }
   },
   {
+	"name": "Ryan Bukhari",
+	"nim": "2401953436",
+	"studyProgram": "Computer Science",
+	"additionalData": {
+		"favoriteLanguage": "JavaScript"
+	  }
+  },
+  {
     "name": "Roland Ramadan",
     "nim": "2501980633",
     "studyProgram": "Computer Science",

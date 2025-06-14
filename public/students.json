@@ -56,15 +56,17 @@
     "nim": "2502047644",
     "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "JavaScript",
+      "favoriteFood" : "Bakso"
     }
   },
   {
-    "name": "Charles Yansen",
-    "nim": "2501978843",
+    "name": "Cecilia Ariani Dewi",
+    "nim": "2540119186",
     "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "JavaScript",
+      "favoriteFood" : "Ayam"
     }
   },
   {

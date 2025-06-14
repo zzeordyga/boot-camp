@@ -15,7 +15,7 @@ const MyPage = () => {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1 ref={nameRef}>Yoko Hermanto - 2501967784</h1>
+      <h1 ref={nameRef}>Yoko Hermanto - 2501967783</h1>
       <p>Saya mahasiswa program studi Computer Science.</p>
       
       <p>Jumlah klik: {clickCount}</p>

@@ -67,6 +67,15 @@
       "favoriteLanguage": "JavaScript"
     }
   },
+<<<<<<< HEAD
+
+  {
+    "name": "Walid Fernando Sastriana",
+    "nim": "2502027232",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, JS"
+=======
   {
     "name": "Fabrian Osmond",
     "nim": "2501964390",
@@ -493,6 +502,7 @@
     "studyProgram": "Computer Science",
     "additionalData": {
         "favoriteLanguage": "JavaScript"
+>>>>>>> c632a0e84b537d49df09d213fe62f76782b61052
     }
   }
 ]

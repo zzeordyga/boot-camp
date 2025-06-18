@@ -5,6 +5,10 @@ import './myStyle.css';
 
 function myApp() {
   const [data, setData] = useState([]);
+  const [red, setRed] = useState(0);
+  const [green, setGreen] = useState(0);
+  const [blue, setBlue] = useState(0);
+  const backgroundRef = useRef(null);
 
   const fetchData = async () =>{
     const {data: studentData} = await axios.get("/students.json");   
@@ -17,10 +21,7 @@ function myApp() {
       }
   },[]);
 
-  const [red, setRed] = useState(0);
-  const [green, setGreen] = useState(0);
-  const [blue, setBlue] = useState(0);
-  const backgroundRef = useRef(null);
+  
 
   const colorStyle = useMemo(() => ({
     backgroundColor: `rgb(${red}, ${green}, ${blue})`,

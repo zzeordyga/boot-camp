@@ -73,7 +73,6 @@ const MyPage = () => {
     borderRadius: '5px',
     cursor: 'pointer',
     fontSize: '14px',
-    transition: 'background-color 0.2s'
   };
 
   const inputStyle = {
@@ -140,8 +139,6 @@ const MyPage = () => {
         <button 
           style={{...buttonStyle, backgroundColor: '#805ad5'}}
           onClick={toggleTheme}
-          onMouseOver={(e) => e.target.style.backgroundColor = '#6b46c1'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#805ad5'}
         >
           Toggle Theme
         </button>

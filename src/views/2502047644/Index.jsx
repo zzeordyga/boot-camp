@@ -4,20 +4,15 @@ const Index = () => {
   const [counter, setCounter] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // useRef hook for DOM reference
   const headingRef = useRef(null);
 
-  // useEffect hook for side effects
   useEffect(() => {
-    // This runs after every render when counter changes
     console.log(`Counter value changed to: ${counter}`);
 
-    // Focus on heading when component mounts
     if (headingRef.current) {
       headingRef.current.focus();
     }
 
-    // Cleanup function
     return () => {
       console.log("Component will unmount or counter changed");
     };
@@ -28,7 +23,6 @@ const Index = () => {
     return counter * 2;
   }, [counter]);
 
-  // Handler functions
   const incrementCounter = () => {
     setCounter((prev) => prev + 1);
   };
@@ -49,7 +43,7 @@ const Index = () => {
   };
 
   const textStyle = {
-    color: isDarkMode ? "#a0d8ff" : "#1a237e", // Light blue / Dark blue
+    color: isDarkMode ? "#a0d8ff" : "#1a237e",
     transition: "color 0.3s ease",
   };
 

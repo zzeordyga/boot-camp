@@ -12,7 +12,7 @@ const MyPage = () => {
   return (
     <div>
       <h1>Charles Yansen - 2501978843</h1>
-      <p>Computer Science</p>
+      <p>Computer Science.</p>
       <input ref={inputRef} placeholder="Type something..." />
       <button onClick={() => setCount(count + 1)}>click {count} times</button>
       <p>Doubled: {doubled}</p>

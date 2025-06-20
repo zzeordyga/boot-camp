@@ -5,7 +5,7 @@ import './style.css';
 // import './views/2501981560/index.css';
 // import Index
 import { BrowserRouter, Route, Routes } from 'react-router';
-import Index from './views/2501981560';
+import Index from './views/2501981560/AvePage';
 
 
 ReactDOM.createRoot(document.getElementById('app')).render(

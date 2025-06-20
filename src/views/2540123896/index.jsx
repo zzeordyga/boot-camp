@@ -1,30 +1,30 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
-function BintangProfile() {
-  const [clicks, setClicks] = useState(0);
-  const headingRef = useRef(null);
+const MyPage = () => {
+  const [count, setCount] = useState(0);
+  const inputRef = useRef();
+  const doubled = useMemo(() => count * 2, [count]);
 
   useEffect(() => {
-    console.log(`You clicked ${clicks} times`);
-  }, [clicks]);
-
-  const doubled = useMemo(() => clicks * 2, [clicks]);
+    inputRef.current.focus();
+  }, []);
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', lineHeight: '1.5' }}>
-      <h1 ref={headingRef}>Bintang Satria Khanafi - 2540123896</h1>
+    <div>
+      <h1>Bintang Satria Khanafi - 2540123896</h1>
+      <p><strong>Computer Science - BINUS University</strong></p>
       <p>
-        I'm a Computer Science student at BINUS University. Passionate about web development and problem solving.
+        The Computer Science program at BINUS University equips students with a strong foundation
+        in software engineering, data structures, algorithms, and problem-solving. It prepares us
+        to build innovative technology solutions for real-world challenges.
       </p>
-
-      <div style={{ marginTop: '1rem' }}>
-        <button onClick={() => setClicks(clicks + 1)} style={{ padding: '0.5rem 1rem', fontSize: '1rem' }}>
-          Click Me!
-        </button>
-        <p>You've clicked {clicks} times. Doubled: {doubled}</p>
-      </div>
+      <input ref={inputRef} placeholder="Type something..." />
+      <button onClick={() => setCount(count + 1)}>
+        Click {count} times
+      </button>
+      <p>Doubled: {doubled}</p>
     </div>
   );
-}
+};
 
-export default BintangProfile;
+export default MyPage;

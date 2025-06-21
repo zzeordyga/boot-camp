@@ -1,16 +1,13 @@
 import React from 'react';
 
+import Index from './views/2540120692/index';
+
 function App() {
   const handleClick = () => {
     alert('Clicked');
   };
 
-  return (
-    <div>
-      <h1>Hello World</h1>
-      <button onClick={handleClick}>Click me</button>
-    </div>
-  );
+  return <Index/>
 }
 
 export default App;

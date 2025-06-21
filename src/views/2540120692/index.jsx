@@ -3,9 +3,11 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 export default function Index() {
     const [side, setSide] = useState(0);
     const [refresh, setRefresh] = useState(0);
+    const inputRef = useRef(null);
 
     useEffect(() => {
         document.title = `Clicked ${refresh} times`;
+        inputRef.current?.focus();
     }, [side]);
 
     const perimeter = useMemo(() => side * 4, [side]);
@@ -30,6 +32,12 @@ export default function Index() {
             <p className="mb-4">
                 refresh counter : <strong>{refresh}</strong>
             </p>
+            <input
+                ref={inputRef}
+                type="text"
+                placeholder="Type here..."
+                className="bg-white border mb-4 p-2 rounded"
+            />
 
             <div className="bg-blue-100 w-1/4 flex-col justify-items-center p-6 rounded-3xl">
                 <h2 className="text-xl font-bold text-center mb-6">Square Calculator</h2>
@@ -57,7 +65,6 @@ export default function Index() {
                     Square Area : <strong>{area}</strong>
                 </p>
             </div>
-
 
         </div>
     );

@@ -13,7 +13,7 @@ function MyProfile() {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>Stephanie Aurelia - 2602117034</h1>
+      <h1>Stephanie Aurelia - 2540123984</h1>
       <p>I am a Computer Science student at Bina Nusantara University.</p>
       <p>{message}</p>
       <button onClick={() => setMessage('Thanks for visiting!')}>

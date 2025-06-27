@@ -60,8 +60,8 @@
     }
   },
   {
-    "name": "Hendrik Hartanto",
-    "nim": "252540126916",
+    "name": "Charles Yansen",
+    "nim": "2501978843",
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"
@@ -493,6 +493,14 @@
     "studyProgram": "Computer Science",
     "additionalData": {
         "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Hendrik Hartanto",
+    "nim": "252540126916",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
     }
   }
 ]

@@ -67,11 +67,6 @@
       "favoriteLanguage": "JavaScript"
     }
   },
-
-  {
-    "name": "Zidane Wicaksono",
-    "nim": "2501977973",
-    "studyProgram": "Computer Science"},
   {
     "name": "Fabrian Osmond",
     "nim": "2501964390",
@@ -500,12 +495,12 @@
         "favoriteLanguage": "JavaScript"
     }
   },
-   {
-    "name": "Michelle Valencia Nurdi",
-    "nim": "2501959775",
+  {
+    "name": "Hendrik Hartanto",
+    "nim": "252540126916",
     "studyProgram": "Computer Science",
     "additionalData": {
-        "favoriteLanguage": "Ruby"
+      "favoriteLanguage": "JavaScript"
     }
   }
 ]

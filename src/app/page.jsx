@@ -1,3 +1,4 @@
+'use client'
 // CTRL + P: search & open file by name
 // ALT + Shift + Up/Down Arrow: copy current line to another line
 'use client'

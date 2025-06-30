@@ -1,7 +1,8 @@
 // CTRL + P: search & open file by name
 // ALT + Shift + Up/Down Arrow: copy current line to another line
-
+'use client'
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   const [filter, setFilter] = useState("");
   const [programFilter, setProgramFilter] = useState("");
   const input = useRef();
+  const router = useRouter();
 
   const filteredData = useMemo(() => {
     if(filter.length === 0 && programFilter.length === 0) return data;
@@ -46,9 +48,12 @@ function App() {
   }
 
   const handleProgramChange = (e) => {
-    console.log(e.target.value);
     setProgramFilter(e.target.value);
   }
+
+  const redirectToStudentPage = (str) => {
+      router.push(`/${str}`)
+  } 
 
   useEffect(() => {
     console.log("Filter here:", filter);
@@ -60,7 +65,6 @@ function App() {
     input.current.focus();
 
     return () => {
-      console.log("Component unmounted")
     }
   }, []);
 
@@ -96,7 +100,7 @@ function App() {
                   <td>{student.studyProgram}</td>
                   <td>{student.additionalData ? JSON.stringify(student.additionalData) : ''}</td>
                   <td>
-                    <button>View</button>
+                    <button onClick={() => redirectToStudentPage(student.nim)}>View</button>
                   </td>
                 </tr>
               )

@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +25,31 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="flex flex-col items-center">
+            <Image
+              width={500}
+              height={200}
+              src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+              alt="Pokemon Image"
+            />
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="/">Home</Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="/about">About Us</Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+        </header>
+        <div className="">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -2,6 +2,10 @@
 import axios from 'axios';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
+import Layout from '../layout.jsx';
+import Link from 'next/link';
+
+
 import './style.css'; 
 
 export default function myApp() {
@@ -11,8 +15,6 @@ export default function myApp() {
   const [green, setGreen] = useState(0);
   const [blue, setBlue] = useState(0);
   const backgroundRef = useRef(null);
-
-  const [foodImage, setFoodImage] = useState(null);
 
   const fetchData = async () =>{
     const {data: studentData} = await axios.get("/students.json");   
@@ -39,6 +41,7 @@ export default function myApp() {
   }, [colorStyle]);
   
   return (
+   
     <div className="flex flex-col items-center justify-center min-h-screen p-5 w-full">
 
       <h1 className="text-center mx-auto max-w-md">
@@ -69,13 +72,14 @@ export default function myApp() {
         </div>
       </div>
 
-      <div className="text-center">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
-          Get Random Food
-        </button>
-        {foodImage && <img src={foodImage} alt="Random food" className="mt-2 max-w-xs" />}
+      <div className="text-center mt-5 bg-blue-500 text-white px-4 py-2 rounded">
+        <Link href="/2440111573/food">
+          Go to Food Generator
+        </Link>
       </div>
+
     </div>
+  
   );
 }
 

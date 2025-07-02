@@ -9,7 +9,7 @@ export default function FoodPage() {
     const [selected, setSelected] = useState('random');
     const [apiLink, setApiLink] = useState('https://foodish-api.com/api/')
 
-    const category = ['random', 'pizza', 'burger'];
+    const category = ['random', 'pizza', 'burger', 'rice', 'pasta', 'dessert'];
 
 
     const fetchFood = async () => {

@@ -18,7 +18,7 @@ export default function Home(){
                 Cat Facts!
             </h2>
             <blockquote className="p-2 bg-green-800 border-red-600 text-yellow-300 rounded">
-                {fact}
+                {catFacts.fact}
             </blockquote>
             <button onClick={fetchCatFacts} className="bg-blue-400 hover:bg-blue-200 text-purple-500 px-4 py-1">
                 New Cat Facts

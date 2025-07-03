@@ -1,8 +1,7 @@
-// views/12345678/details.jsx
 "use client";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import Layout from "./layout";
+import Layout from "../layout";
 
 const DetailsPage = () => {
   const [details, setDetails] = useState(null);

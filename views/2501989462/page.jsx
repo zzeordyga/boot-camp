@@ -1,4 +1,3 @@
-// views/12345678/index.jsx
 "use client";
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import Layout from "./layout";

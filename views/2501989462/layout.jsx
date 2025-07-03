@@ -1,4 +1,3 @@
-// views/12345678/layout.jsx
 import React from "react";
 
 const Layout = ({ children }) => {

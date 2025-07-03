@@ -1,28 +1,34 @@
-'use client'
-import React, {useState, useEffect, useRef, useMemo} from "react";
-
-const myPage = () => {
-    const [count, setCount] = useState(0);
-    const inputRef = useRef();
-    const doubled = useMemo(() => count * 2, [count]);
-    useEffect(() => {
-        document.title = 'Clicked button ${count} times';
-        inputRef.current = count;
-    }, [count]);
-
+"use client";
+import { useEffect, useState, useRef } from "react";
+export default function Home(){
+    const[catFacts, setCatFacts]=useState([]);
+    const counterRef=useRef(0);
+    const fetchCatFacts=async()=>{
+        const res=await fetch("https://catfact.ninja/fact");
+        const data=await res.json();
+        setCatFacts(data.fact);
+        counterRef.current+=1;
+    }
+    useEffect(()=>{
+        fetchCatFacts();
+    }, []);
     return(
-        <div className="pb-8 text-center">
-            <h1 className="text-4x1 font-bold">Abhiniwesa Pinandita - 2201803396</h1>
-            <p className="mb-6">
-                I have graduated with a degree in Computer Science & Statistics, 
-                a dual degree program that allow me to both Computer Science & Statistics
-            </p>
-            <button className="bg-green-800 text-black px-8 py-4 " onClick={() => setCount(count + 1)}>
-                Click Here ({count})
+        <div className="space-x-3">
+            <h2 className="text-4xl font-semibold text-pink-800">
+                Cat Facts!
+            </h2>
+            <blockquote className="p-2 bg-green-800 border-red-600 text-yellow-300 rounded">
+                {fact}
+            </blockquote>
+            <button onClick={fetchCatFacts} className="bg-blue-400 hover:bg-blue-200 text-purple-500 px-4 py-1">
+                New Cat Facts
             </button>
-            <p>Doubled score (useMemo): {doubled}</p>
-            <p>Last Ref: {inputRef.current}</p>
+            <p className="text-sm text-black">
+                Number of clicks is: <span>{counterRef.current}</span>
+            </p>
+            <p className="text-sm text-black">
+                Length of Sentence is: <span>{catFacts.length}</span>
+            </p>
         </div>
     );
 }
-export default myPage;

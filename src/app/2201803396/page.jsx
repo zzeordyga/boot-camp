@@ -1,34 +1,32 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import Layout from "./layout";
+import Link from "next/link";
 export default function Home(){
-    const[catFacts, setCatFacts]=useState([]);
+    const[catFacts, setCatFacts]=useState('');
     const counterRef=useRef(0);
-    const fetchCatFacts=async()=>{
-        const res=await fetch("https://catfact.ninja/fact");
-        const data=await res.json();
-        setCatFacts(data.fact);
-        counterRef.current+=1;
-    }
     useEffect(()=>{
-        fetchCatFacts();
+        fetch('https://catfact.ninja/fact')
+        .then(res=>res.json())
+        .then(data=>setCatFacts(data.fact));
     }, []);
+    counterRef.current+=1;
     return(
+        <Layout>
         <div className="space-x-3">
             <h2 className="text-4xl font-semibold text-pink-800">
                 Cat Facts!
             </h2>
             <p className="p-2 border-red-600 text-yellow-300 rounded">
-                {catFacts.fact}
-            </p>
-            <button onClick={fetchCatFacts} className="bg-blue-400 hover:bg-blue-200 text-purple-500 px-4 py-1">
-                New Cat Facts
-            </button>
-            <p className="text-sm text-black">
-                Number of clicks is: <span>{counterRef.current}</span>
+                {fact}
             </p>
             <p className="text-sm text-black">
-                Length of Sentence is: <span>{catFacts.length}</span>
+                Number of times page is rendered is: {counterRef.current}
+            </p>
+            <p className="text-sm text-black">
+                Length of Sentence is: {length}
             </p>
         </div>
+        </Layout>
     );
 }

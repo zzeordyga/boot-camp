@@ -17,9 +17,9 @@ export default function Home(){
             <h2 className="text-4xl font-semibold text-pink-800">
                 Cat Facts!
             </h2>
-            <blockquote className="p-2 border-red-600 text-yellow-300 rounded">
+            <p className="p-2 border-red-600 text-yellow-300 rounded">
                 {catFacts}
-            </blockquote>
+            </p>
             <button onClick={fetchCatFacts} className="bg-blue-400 hover:bg-blue-200 text-purple-500 px-4 py-1">
                 New Cat Facts
             </button>

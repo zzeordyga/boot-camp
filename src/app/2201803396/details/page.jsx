@@ -3,9 +3,6 @@ import React, {useState, useEffect, useMemo} from "react";
 const myPage=()=>{
     const [count, setCount]=useState(0);
     const tripled=useMemo(()=>count*3,[count]);
-    useEffect(()=>{
-        inputRef.current.focus();
-    }, []);
     return(
         <div className="p-5 font-normal">
             <h1>

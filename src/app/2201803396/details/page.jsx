@@ -5,7 +5,6 @@ const myPage=()=>{
     const [count, setCount]=useState(0);
     const tripled=useMemo(()=>count*3,[count]);
     return(
-        <Layout>
         <div className="p-5 font-normal">
             <h1>
                 Abhiniwesa Pinandita Acandrakasthayi - 2201803396
@@ -19,7 +18,6 @@ const myPage=()=>{
             <p>Current Click Value: {count}</p>
             <p>Current Click Value Tripled: {tripled}</p>
         </div>
-        </Layout>
     );
 };
 export default myPage;

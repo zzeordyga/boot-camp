@@ -1,7 +1,3 @@
-export const metadata={
-    title: "Halaman Student 2201803396",
-    description: "Tugas Halaman Next.js"
-};
 export default function Layout({children}){
     return(
         <div className="bg-gray-300 text-black font-serif">

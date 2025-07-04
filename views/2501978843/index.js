@@ -6,13 +6,21 @@ import styles from './index.module.css';
 export default function Home() {
   const [pokemonList, setPokemonList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
   const searchInputRef = useRef(null);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
       .then(res => res.json())
-      .then(data => setPokemonList(data.results))
-      .catch(error => console.error('Error fetching Pokémon:', error));
+      .then(data => {
+        setPokemonList(data.results);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching Pokémon:', error);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -32,21 +40,27 @@ export default function Home() {
       <h1 className={styles.title}>Daftar Pokémon</h1>
       <input
         type="text"
-        placeholder="Cari Pokémon"
+        placeholder="Cari Pokémon..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
         ref={searchInputRef}
         className={styles.searchInput}
       />
-      <ul className={styles.pokemonList}>
-        {filteredPokemon.map(pokemon => (
-          <li key={pokemon.name} className={styles.pokemonItem}>
-            <Link href={`/12345678/pokemon/${pokemon.name}`}>
-              {pokemon.name}
+      {isLoading ? (
+        <div className={styles.loader}>Loading...</div>
+      ) : filteredPokemon.length === 0 ? (
+        <p className={styles.noResults}>No Pokémon found!</p>
+      ) : (
+        <div className={styles.pokemonGrid}>
+          {filteredPokemon.map(pokemon => (
+            <Link href={`/2501978843/pokemon/${pokemon.name}`} key={pokemon.name}>
+              <div className={styles.pokemonCard}>
+                <h3 className={styles.pokemonName}>{pokemon.name}</h3>
+              </div>
             </Link>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      )}
     </Layout>
   );
 }

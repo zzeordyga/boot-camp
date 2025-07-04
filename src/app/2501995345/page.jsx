@@ -23,8 +23,6 @@ export default function Page() {
       setAnimeList(animeData);
       setPage(current_page);
       setHasNextPage(has_next_page);
-      console.log(animeData);
-      console.log(current_page);
     } catch (err) {
       console.log(err);
     } finally {
@@ -56,31 +54,7 @@ export default function Page() {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {/* <AnimeCard id="123" description="aSdasdsd" imageUrl="" /> */}
-
         {animeList.map((anime, index) => (
-          // <Link
-          //   key={index}
-          //   href={`/2501995345/${anime.mal_id}`}
-          //   className="flex flex-col bg-white rounded-lg shadow-md w-auto border-2 border-transparent hover:border-[#2e63e9] hover:border-2 transition-all duration-300"
-          // >
-          //   <div className="w-full h-[400px] relative">
-          //     <Image
-          //       src={anime.images.jpg.image_url}
-          //       alt={anime.title}
-          //       fill
-          //       className="object-cover rounded-t-lg"
-          //     />
-          //   </div>
-          //   <div className="flex flex-col gap-2 p-4">
-          //     <h2 className="text-lg font-bold text-[#2e63e9]">
-          //       {anime.title}
-          //     </h2>
-          //     <p className="text-sm font-normal text-neutral-400">
-          //       {truncateText(anime.synopsis, 100)}
-          //     </p>
-          //   </div>
-          // </Link>
           <AnimeCard
             key={index}
             id={anime.mal_id}

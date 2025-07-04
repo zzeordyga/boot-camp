@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
 function Index() {
-  const [color, setColor] = useState("#3498db");
+  const [color, setColor] = useState("#ffffff");
   const inputRef = useRef(null);
 
   useEffect(() => {

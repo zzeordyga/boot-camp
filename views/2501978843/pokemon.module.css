@@ -1,0 +1,23 @@
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.types {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    max-width: 150px;
+  }
+}

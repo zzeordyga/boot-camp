@@ -44,7 +44,7 @@ const Index = () => {
 
         <div className='mt-4'>
           <Button onClick={fetchFacts}>
-            Give Me Another Fact
+            Give Me Another Facts!
           </Button>
         </div>
         

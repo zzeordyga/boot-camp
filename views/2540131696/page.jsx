@@ -1,70 +1,66 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+'use client';
 
-const HalamanProfilSaya = () => {
-  const namaMahasiswa = 'Riezky rizawardana';
-  const nimMahasiswa = '2540131696';
+import { useState, useEffect, useMemo, useRef } from 'react';
+import Link from 'next/link';
 
-  const [pesan, setPesan] = useState('');
-  const [counter, setCounter] = useState(0);
-
+export default function PokemonListPage() {
+  const [pokemons, setPokemons] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
   const inputRef = useRef(null);
 
   useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
+    const fetchPokemons = async () => {
+      try {
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+        const data = await res.json();
+        setPokemons(data.results);
+      } catch (error) {
+        console.error("Gagal mengambil data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPokemons();
   }, []);
 
-  const kalkulasiKompleks = useMemo(() => {
-    console.log('Melakukan kalkulasi kompleks...');
-    return counter * 2;
-  }, [counter]);
+  const filteredPokemons = useMemo(() => {
+    if (!searchTerm) {
+      return pokemons;
+    }
+    return pokemons.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [pokemons, searchTerm]);
 
-  useEffect(() => {
-    document.title = `Counter: ${counter}`;
-  }, [counter]);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif', lineHeight: '1.5' }}>
-      
-      <h1 style={{ color: '#007bff' }}>{namaMahasiswa} - {nimMahasiswa}</h1>
-      
-      <p>
-        Saya adalah mahasiswa dari program studi Computer Science yang memiliki ketertarikan pada Penggunaan React.
-      </p>
-
-      <hr style={{ margin: '2rem 0' }} />
-
-      <h2 style={{ borderBottom: '2px solid #eee', paddingBottom: '0.5rem' }}>Contoh Penggunaan Hooks</h2>
-
-      <div style={{ marginBottom: '1.5rem' }}>
-        <h3 style={{color: '#555'}}>Hook: useState & useRef</h3>
-        <label htmlFor="pesan">Tinggalkan Pesan: </label>
+    <div>
+      <h2>Daftar Pokemon</h2>
+      <div style={{ marginBottom: '2rem' }}>
         <input
           ref={inputRef}
-          id="pesan"
           type="text"
-          value={pesan}
-          onChange={(e) => setPesan(e.target.value)}
-          style={{ padding: '0.5rem', marginLeft: '0.5rem', width: '250px' }}
+          placeholder="Cari Pokemon..."
+          onChange={e => setSearchTerm(e.target.value)}
+          style={{ padding: '0.5rem' }}
         />
-        {pesan && <p>Pesanmu: <strong>{pesan}</strong></p>}
-      </div>
-      
-      <div style={{ marginBottom: '1.5rem' }}>
-        <h3 style={{color: '#555'}}>Hook: useEffect & useMemo</h3>
-        <p>Nilai Counter: {counter}</p>
-        <p>Hasil Kalkulasi (di-cache oleh useMemo): {kalkulasiKompleks}</p>
-        <button onClick={() => setCounter(c => c + 1)} style={{ padding: '0.5rem 1rem' }}>
-          Tambah Counter
+        <button onClick={() => inputRef.current.focus()} style={{ marginLeft: '0.5rem', padding: '0.5rem' }}>
+          Focus Search
         </button>
-        <p style={{fontSize: '0.9em', color: '#666'}}>
-          <i>(Perhatikan judul tab browser dan konsol saat tombol ini diklik)</i>
-        </p>
       </div>
-
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+        {filteredPokemons.map(pokemon => (
+          <Link key={pokemon.name} href={`/views/2540131696/details/${pokemon.name}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "1rem", width: "150px", textAlign: "center", textTransform: "capitalize", cursor: 'pointer' }}>
+              <p>{pokemon.name}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
-};
-
-export default HalamanProfilSaya;
+}

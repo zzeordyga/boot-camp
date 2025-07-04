@@ -1,4 +1,6 @@
+'use client'
 import React, {useState, useEffect, useRef, useMemo} from 'react';
+import ReactDOM from "react-dom/client";
 
 const MyPage = () => {
     const [count, setCount] = useState(0);

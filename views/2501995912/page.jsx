@@ -1,46 +1,50 @@
-import { useState, useEffect, useRef } from 'react'
+'use client'
 
-export default function MyPage() {
-  const [clicks, setClicks] = useState(0)
-  const [greeting, setGreeting] = useState('')
-  const nameRef = useRef(null)
+import { useEffect, useState, useRef, useMemo } from 'react'
+import Link from 'next/link'
+
+export default function HomePage() {
+  const [fact, setFact] = useState(null)
+  const fetchCount = useRef(0)
 
   useEffect(() => {
-    setGreeting('Welcome to my React page!')
+    fetchFact()
   }, [])
 
-  const handleClick = () => {
-    setClicks(clicks + 1)
-    nameRef.current?.focus()
+  const fetchFact = async () => {
+    const res = await fetch('https://catfact.ninja/fact')
+    const data = await res.json()
+    setFact(data.fact)
+    fetchCount.current += 1
   }
 
+  const wordCount = useMemo(() => {
+    return fact ? fact.split(' ').length : 0
+  }, [fact])
+
   return (
-    <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Michael Surya – 2501995912</h1>
-      <p>I am a Computer Science student with a strong interest in Front-End Web Development, currently learning modern frameworks like React.</p>
-
-      <h2 style={{ marginTop: '1rem', color: '#007acc' }}>{greeting}</h2>
-
-      <div style={{ marginTop: '1rem' }}>
-        <input ref={nameRef} type="text" placeholder="Type your name..." />
-      </div>
-
+    <div>
+      <h2 className="text-xl font-semibold mb-4">Random Cat Fact 🐱</h2>
+      {fact ? (
+        <p className="mb-2">{fact}</p>
+      ) : (
+        <p className="text-gray-500">Loading...</p>
+      )}
+      <p className="text-sm text-gray-500 mb-4">
+        Word Count: {wordCount} | API calls: {fetchCount.current}
+      </p>
       <button
-        onClick={handleClick}
-        style={{
-          marginTop: '1rem',
-          padding: '10px 20px',
-          backgroundColor: '#007acc',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer'
-        }}
+        onClick={fetchFact}
+        className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
       >
-        Click Me!
+        Get New Fact
       </button>
 
-      <p>You clicked {clicks} times.</p>
+      <div className="mt-6">
+        <Link href="/views/2501995912/details" className="text-blue-500 underline">
+          Go to Details Page →
+        </Link>
+      </div>
     </div>
   )
 }

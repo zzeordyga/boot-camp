@@ -1,10 +1,26 @@
 [
   {
+    "name": "Fauzan Hafizh Zulfikar",
+    "nim": "2201792032",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Hobby": "watch Anime, read Light novel, and Playing games"
+    }
+  },
+  {
+    "name": "Riezky Rizawardana.",
+    "nim": "2540131696",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Python"
+    }
+  },
+  {
     "name": "Bintang Satria Khanafi",
     "nim": "2540123896",
     "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "Python"
     }
   },
   {
@@ -46,6 +62,174 @@
   {
     "name": "Charles Yansen",
     "nim": "2501978843",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+
+  {
+    "name": "Zidane Wicaksono",
+    "nim": "2501977973",
+    "studyProgram": "Computer Science"},
+  {
+    "name": "Fabrian Osmond",
+    "nim": "2501964390",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Darul Riyanto",
+    "nim": "2501994790",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Vincent Hungadi",
+    "nim": "2502012804",
+    "studyProgram": "Game Application and Technology",
+    "additionalData": {
+      "favoriteLanguage": "C#"
+    }
+  },
+  {
+    "name": "Vincentius Justine Gozali",
+    "nim": "2540120692",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Golang"
+    }
+  },
+  {
+    "name": "Safira SS",
+    "nim": "2501992854",
+    
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Erwin Indrawan",
+    "nim": "2502002551",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Andi Mataraja",
+    "nim": "2540124324", 
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Rahma Putri Laura Marvialdi",
+    "nim": "2502013492",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Next.js"
+    }
+  },
+  {
+    "name": "Michael Surya",
+    "nim": "2501995912",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+	"name": "Ryan Bukhari",
+	"nim": "2401953436",
+	"studyProgram": "Computer Science",
+	"additionalData": {
+		"favoriteLanguage": "JavaScript"
+	  }
+  },
+  {
+    "name": "Roland Ramadan",
+    "nim": "2501980633",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "currentBootCamp": "Binus Bootcamp",
+      "currentEmployment": "Unemployed"
+    }
+  },
+  {
+    "name": "Edward Wijaya",
+    "nim": "2540125434",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "PHP"
+    }
+  },
+  {
+    "name": "Mario Rizqi F",
+    "nim": "2501966231",
+    
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Javascript"
+    }
+  },
+  {
+    "name": "Ni Komang Adetiwi Anjani",
+    "nim": "2502029383",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Hobby": "Dancing"
+    }
+  },
+  {
+    "name": "Kim Namjoon",
+    "nim": "19940912",
+    "studyProgram": "Broadcasting & Entertaintment",
+    "additionalData": {
+      "Hobby": "Writing"
+    }
+  },
+  {
+    "name": "Kevin Sebastian",
+    "nim": "2501974050",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, CSS, SQL, C#, Java & JavaScript"
+    }
+  },
+  {
+    "name": "Natalia Lairan",
+    "nim": "2502023890",
+    "studyProgram": "Global Class - Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "HTML, SQL, Python, CSS"
+    }
+  },
+  {
+    "name": "Vincent",
+    "nim": "2501992343",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "gurt": "yo"
+    }
+  },
+  {
+    "name": "Christopher Nathanael",
+    "nim": "2540121045",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
+    "name": "Putra Panca Prasetya",
+    "nim": "2502006726",
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"
@@ -288,6 +472,14 @@
     }
   },
   {
+    "name": "Yoko Hermanto",
+    "nim": "2501967783",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Python"
+    }
+  },
+  {
     "name": "Imanuel Eklesio",
     "nim": "2440044190",
     "studyProgram": "Computer Science",
@@ -299,5 +491,21 @@
     "name": "Muhammad Al Haddad",
     "nim": "2502024376",
     "studyProgram": "Computer Science"
+  },
+  {
+    "name": "Farah Putri Yusriyah",
+    "nim": "2502023511",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript"
+    }
+  },
+   {
+    "name": "Michelle Valencia Nurdi",
+    "nim": "2501959775",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Ruby"
+    }
   }
 ]

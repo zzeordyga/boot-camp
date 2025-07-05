@@ -1,0 +1,40 @@
+
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+  justify-content: center;
+  max-width: 200px; 
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-label {
+  min-width: 60px;
+  text-align: left;
+}
+
+.slider-value {
+  min-width: 50px;
+  text-align: right;
+}
+
+.slider-input {
+  flex: 1;
+}
+
+.background-box {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

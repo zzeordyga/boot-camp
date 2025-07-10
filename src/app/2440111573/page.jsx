@@ -6,6 +6,8 @@ import Layout from '../layout.jsx';
 import Link from 'next/link';
 
 
+
+
 import './style.css'; 
 
 export default function myApp() {
@@ -75,6 +77,10 @@ export default function myApp() {
       <div className="text-center mt-5 bg-blue-500 text-white px-4 py-2 rounded">
         <Link href="/2440111573/food">
           Go to Food Generator
+        </Link>
+        <br />
+        <Link href="/2440111573/post">
+          Go to posts
         </Link>
       </div>
 

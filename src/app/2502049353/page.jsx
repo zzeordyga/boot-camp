@@ -1,5 +1,7 @@
 'use client'
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import HomePage from '../../../views/2502049353/page';
+
 
 const MyPage = () => {
   const [count, setCount] = useState(0);
@@ -44,4 +46,4 @@ const MyPage = () => {
   );
 };
 
-export default Index;
+export default HomePage;

@@ -1,0 +1,69 @@
+/* styles/HomePage.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #1a1a2e;
+}
+
+.home-container {
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  margin: 0; 
+}
+
+.home-container h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-button {
+  display: inline-block; 
+  padding: 15px 25px; 
+  background: linear-gradient(90deg, #ff6f61, #e84a5f);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 3px 15px rgba(255, 111, 97, 0.5);
+  transition: all 0.4s ease;
+  white-space: nowrap; 
+  max-width: fit-content; 
+  margin: 0 auto; 
+  font-family: 'Arial', sans-serif;
+}
+
+.home-button:hover {
+  box-shadow: 0 6px 25px rgba(255, 111, 97, 0.7);
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

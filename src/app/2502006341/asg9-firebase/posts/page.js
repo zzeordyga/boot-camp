@@ -51,7 +51,7 @@ export default function Posts(){
         setLoad(false);
     }, [keyword]);
 
-    function searchPots(){
+    function searchPosts(){
         setKeyword(searchField.current.value);
     }
 

@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import Link from 'next/link';
 
 const MyPage = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -19,6 +20,9 @@ const MyPage = () => {
         Clicked {clickCount} times
       </button>
       <p>Doubled Clicks: {doubledCount}</p>
+      <Link href="/2440044190/posts" className="text-blue-600 underline">
+        Go to Posts Page →
+      </Link>
     </div>
   );
 };

@@ -27,6 +27,8 @@ export default function Posts() {
 
   const getPosts = async () => {
     try {
+      setIsLoading(true);
+
       const db = getDatabase();
       const postCollection = collection(db, "posts");
       const postSnapshot = await getDocs(postCollection);
@@ -44,6 +46,8 @@ export default function Posts() {
 
   const getPostsByTitle = async (title) => {
     try {
+      setIsLoading(true);
+
       const db = getDatabase();
       const postCollection = collection(db, "posts");
       const postQuery = query(
@@ -71,6 +75,7 @@ export default function Posts() {
   const debouncedGetPostsByTitle = useCallback(
     debounce((value) => {
       getPostsByTitle(value);
+      handleSubscribe(value);
     }, 500),
     []
   );
@@ -81,13 +86,15 @@ export default function Posts() {
     debouncedGetPostsByTitle(value);
   };
 
-  const handleSubscribe = useCallback(() => {
+  const handleSubscribe = (value = "") => {
+    setIsLoading(true);
+
     const db = getDatabase();
     const postCollection = collection(db, "posts");
     const postQuery = query(
       postCollection,
-      where("title", ">=", search),
-      where("title", "<=", search + "~")
+      where("title", ">=", value),
+      where("title", "<=", value + "~")
     );
 
     const unsubscribe = onSnapshot(postQuery, (snapshot) => {
@@ -107,13 +114,14 @@ export default function Posts() {
         })
       );
       setIsPostUpdated(true);
+      setIsLoading(false);
     });
     return () => unsubscribe();
-  }, [search]);
+  };
 
   useEffect(() => {
     handleSubscribe();
-  }, [handleSubscribe]);
+  }, []);
 
   useEffect(() => {
     if (isPostUpdated) {

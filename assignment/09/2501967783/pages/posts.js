@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
-import { db } from "../lib/Firebase";
+import { db } from "../lib/firebase";
 import ErrorBoundary from "../components/ErrorBoundary";
 import '../styles/PostPage.css'
 

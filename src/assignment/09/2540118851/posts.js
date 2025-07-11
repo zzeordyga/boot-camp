@@ -1,4 +1,3 @@
-// lib/posts.js
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "./firebase";
 

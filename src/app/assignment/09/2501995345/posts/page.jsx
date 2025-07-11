@@ -90,7 +90,6 @@ export default function Posts() {
       where("title", "<=", search + "~")
     );
 
-    console.log("search", search);
     const unsubscribe = onSnapshot(postQuery, (snapshot) => {
       const postList = snapshot.docs.map((doc) => ({
         id: doc.id,

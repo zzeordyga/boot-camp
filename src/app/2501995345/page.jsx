@@ -1,69 +1,59 @@
 "use client";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-import api from "./_libs/api.js";
-import { valueOrDefault, truncateText } from "./_libs/utils.js";
-import AnimeCard from "./_components/anime-card.jsx";
-
-export default function Page() {
-  const [animeList, setAnimeList] = useState([]);
-  const [page, setPage] = useState(1);
-  const [hasNextPage, setHasNextPage] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const fetchAnimeList = async () => {
-    try {
-      const response = await axios.get(api.getTopAnime);
-      const { data = {} } = valueOrDefault(response, {});
-      const { data: animeData = [] } = data;
-      const { pagination = {} } = data;
-      const { current_page = 1, has_next_page = false } = pagination;
-      setAnimeList(animeData);
-      setPage(current_page);
-      setHasNextPage(has_next_page);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+const MyPage = () => {
+  const [count, setCount] = useState(0);
+  const inputRef = useRef(null);
+  const doubled = useMemo(() => count * 2, [count]);
 
   useEffect(() => {
-    fetchAnimeList();
+    document.title = "Rafly Irham Safatulloh - 2501995345";
+  }, []);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  // Remove existing styling, then inject tailwind
+  useEffect(() => {
+    document.getElementsByTagName("style")[0]?.remove();
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4";
+    document.head.appendChild(script);
+
+    // clean up
+    return () => {
+      const twScript = document.querySelector(
+        'script[src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"]'
+      );
+      twScript?.remove();
+    };
   }, []);
 
   return (
-    <div className="flex flex-col gap-10">
-      <h1 className="text-4xl font-bold text-[#2e63e9]">Anime List</h1>
+    <div className="flex flex-col px-20 py-32 bg-[#1A1A1D] h-dvh gap-4">
+      <h1 className="text-4xl font-bold uppercase text-[#DFD0B8]">
+        Rafly Irham Safatulloh - 2501995345
+      </h1>
+      <p className="text-2xl text-[#948979] font-semibold">Computer Science</p>
+      <input
+        className="px-3 py-2 border-[1px] border-[#ECDFCC] w-[300px] rounded-md text-[#ECDFCC] bg-[#ecdfcc2b] outline-none "
+        ref={inputRef}
+        placeholder="Type something..."
+      />
 
-      {isLoading && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <div
-              key={index}
-              className="w-auto h-[400px] bg-neutral-300 rounded-lg animate-pulse"
-            ></div>
-          ))}
-        </div>
-      )}
-
-      {!isLoading && !animeList.length && (
-        <p className="text-lg font-normal text-neutral-400">No anime found.</p>
-      )}
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {animeList.map((anime, index) => (
-          <AnimeCard
-            key={index}
-            id={anime.mal_id}
-            title={anime.title}
-            description={anime.synopsis}
-            imageUrl={anime.images.jpg.image_url}
-          />
-        ))}
+      <div className="flex flex-row items-center gap-x-2">
+        <button
+          className="px-3 py-2 border-[1px] border-[#ECDFCC] w-[300px] rounded-md text-[#ECDFCC] bg-[#ecdfcc2b] hover:bg-[#ecdfcc2b]/90 active:scale-95 transition-all duration-300 outline-none cursor-pointer"
+          onClick={() => setCount(count + 1)}
+        >
+          Click {count} times
+        </button>
+        <p className="text-[#ECDFCC]">Doubled: {doubled}</p>
       </div>
     </div>
   );
-}
+};
+
+export default MyPage;

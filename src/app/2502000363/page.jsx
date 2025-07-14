@@ -1,32 +1,23 @@
-'use client'
-import React, { useState,useEffect,useRef,useMemo} from 'react';
+'use client';
+import Link from 'next/link';
 
-const MyPage = () => {
-    const [count, setCount] = useState(0);
-    const inputRef = useRef();
-    const doubled = useMemo(() => count * 2, [count]);
 
-    useEffect(() => {
-        inputRef.current.focus();
-    }, []);
+const page = () => {
+  return (
+    <main style={{ textAlign: 'center', padding: '2rem' }}>
+      <h1>Assignment 10</h1>
+      <p>This is a Firebase + Next.js app</p>
 
-    return (
-        <div style={{padding: '2rem',fontFamily: 'Arial'}}>
-        <h1>Owen Maha Putra - 2502000363</h1>
-        <p>I am currently studying Computer Science at BINUS University with streaming minor of Interactive Multimedia
-            which focuses on front-end development. This program helps me build websites, improve user experiences and prepare for 
-            real world application problems.   
-        </p>
-        <input ref={inputRef}
-         placeholder="type here..." 
-         style={{marginRight: '1rem'}}
-         />
-        <button onClick={() => setCount(count + 1)}>
-            Click me for {count} times
-        </button>
-        <p>Doubled: {doubled}</p>
-        </div>
-    );
+      <div style={{ marginTop: '2rem' }}>
+        <Link href="/2502000363/login">
+          <button style={{ marginRight: '1rem', padding: '0.5rem 1rem' }}>Login</button>
+        </Link>
+        <Link href="/2502000363/register">
+          <button style={{ padding: '0.5rem 1rem' }}>Register</button>
+        </Link>
+      </div>
+    </main>
+  );
 };
 
-export default MyPage;
+export default page;

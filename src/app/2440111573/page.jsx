@@ -82,7 +82,12 @@ export default function myApp() {
         <Link href="/2440111573/post">
           Go to posts
         </Link>
+        <br />
+        <Link href="/2440111573/sesi-10">
+          Go to sesi-10
+        </Link>
       </div>
+      
 
     </div>
   

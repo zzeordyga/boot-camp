@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h2 id="welcomeText">Welcome</h2>
+  <div id="adminPanel" style="display:none;">
+    <h3>Admin Panel</h3>
+    <p>Only visible to admin.</p>
+  </div>
+
+  <button onclick="logout()">Logout</button>
+
+  <script type="module">
+    import { auth } from './js/firebase.js';
+    import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+    const role = localStorage.getItem("role");
+
+    if (!role) {
+      window.location.href = "unauthorized.html";
+    }
+
+    document.getElementById("welcomeText").textContent += `, Role: ${role}`;
+
+    if (role === "admin") {
+      document.getElementById("adminPanel").style.display = "block";
+    }
+
+    window.logout = async function() {
+      await signOut(auth);
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

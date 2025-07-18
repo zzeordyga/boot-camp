@@ -26,3 +26,4 @@ dist-ssr
 .next
 next-env.d.ts
 dist
+js/firebaseConfig.js

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        main { max-width: 500px; margin: auto; padding-top: 3rem; }
+        footer { text-align: center; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <article>
+            <h2 style="text-align: center;">Login</h2>
+            <form onsubmit="loginUser(event)">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Masuk</button>
+            </form>
+            <footer>
+                <small>Belum punya akun? <a href="register.html">Daftar di sini</a></small>
+            </footer>
+        </article>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

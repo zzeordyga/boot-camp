@@ -1,0 +1,1 @@
+export default () => <h1>User Profile (Protected)</h1>;

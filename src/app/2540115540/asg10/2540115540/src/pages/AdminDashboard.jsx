@@ -1,0 +1,1 @@
+export default () => <h1>Admin Dashboard (Admins Only)</h1>;

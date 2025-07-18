@@ -1,0 +1,1 @@
+export default () => <h1>Home Page (Public)</h1>;

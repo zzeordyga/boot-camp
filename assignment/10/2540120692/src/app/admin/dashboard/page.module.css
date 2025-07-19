@@ -1,0 +1,31 @@
+.page {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+}
+
+.header,
+.cell {
+  padding: 10px;
+  border: 1px solid var(--foreground);
+}
+
+.addButton {
+  float: right;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

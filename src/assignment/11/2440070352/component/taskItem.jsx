@@ -4,7 +4,7 @@ export default function TaskItem({ title, onDelete }) {
       <span>{title}</span>
       <button
         onClick={onDelete}
-        className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700"
+        className="bg-red-500 text-black px-2 py-1 rounded hover:bg-red-700"
       >
         Delete
       </button>

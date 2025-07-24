@@ -1,3 +1,14 @@
+/* @import "tailwindcss"; */
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
 
 .slider-container {

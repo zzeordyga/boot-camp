@@ -6,11 +6,13 @@ import Layout from '../layout.jsx';
 import Link from 'next/link';
 
 
+
+
 import './style.css'; 
+import { useTheme } from './context/themeContext.jsx';
 
 export default function myApp() {
   const [data, setData] = useState([]);
-
   const [red, setRed] = useState(0);
   const [green, setGreen] = useState(0);
   const [blue, setBlue] = useState(0);
@@ -39,11 +41,19 @@ export default function myApp() {
       backgroundRef.current.style.backgroundColor = colorStyle.backgroundColor;
     }
   }, [colorStyle]);
+
+  const {theme, toggleTheme} = useTheme();
   
   return (
    
     <div className="flex flex-col items-center justify-center min-h-screen p-5 w-full">
 
+      <button onClick={toggleTheme} className="mb-5">
+        Switch theme to {theme === "light" ? "dark" : "light"}
+      </button> 
+
+      <br />
+      
       <h1 className="text-center mx-auto max-w-md">
         {data.name} - {data.nim}
       </h1>
@@ -76,7 +86,16 @@ export default function myApp() {
         <Link href="/2440111573/food">
           Go to Food Generator
         </Link>
+        <br />
+        <Link href="/2440111573/post">
+          Go to posts
+        </Link>
+        <br />
+        <Link href="/2440111573/sesi-10">
+          Go to sesi-10
+        </Link>
       </div>
+      
 
     </div>
   

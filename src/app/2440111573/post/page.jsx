@@ -1,17 +1,18 @@
 'use client'
-import { collection, getDocs, Timestamp, onSnapshot } from "firebase/firestore";
+import { getDocs, Timestamp, onSnapshot, collection } from "firebase/firestore";
 import getDatabase from "../firebase/config";
 import PageList from "./page-list.jsx";
 import Spinner from "../component/loading.jsx";
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-
+import useLocalStorage from "../hook/useLocalStorage.js";
 
 export default function postPage(){
     const [postList, setPostList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState("");
+    const [sortOrder, setSortOrder] = useLocalStorage("sortOrder", "asc"); 
 
     useEffect(()=>{
         console.log("run this");
@@ -19,8 +20,9 @@ export default function postPage(){
         
         try{
 
-            const fetchPost = async ()=>{
-                const db = getDatabase();
+            const fetchPost = ()=>{
+                const {db} = getDatabase();
+                console.log("db: ", db);
 
                 if (!db) {
                     console.error("Database instance is undefined. Check firebase/config.");
@@ -29,6 +31,7 @@ export default function postPage(){
                 }
 
                 const postCol = collection(db,"posts");
+                // console.log("postCol: ", postCol);
                 unsubscribe = onSnapshot(postCol,(snapshot)=>{
                     const postListData = snapshot.docs.map((doc)=>{
                         const data = doc.data();
@@ -85,6 +88,15 @@ export default function postPage(){
     const filteredPosts = postList.filter((post) =>
         post.title.toLowerCase().includes(filter.toLowerCase())
     );
+
+    filteredPosts.sort((a, b) => {  
+        if (sortOrder === "asc") {
+            return a.title.localeCompare(b.title);
+        } else {
+            return b.title.localeCompare(a.title);
+        }
+    });
+             
     
     return (
         <>
@@ -92,6 +104,7 @@ export default function postPage(){
             Back to Main Page
         </Link>
         <br />
+        <h1 className="text-center text-2xl font-bold mb-5">Add Assignment 11: sorting with preference hook and CRUD operation with onSnapshot</h1>
         <input
             type="text"
             value={filter}
@@ -105,6 +118,19 @@ export default function postPage(){
                 borderRadius: "4px",
             }}
         />
+        <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+            style={{
+                padding: "8px",
+                marginLeft: "10px",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+            }}
+        >
+            <option value="asc">Sort by Title (A-Z)</option>
+            <option value="desc">Sort by Title (Z-A)</option>
+        </select>
         <PageList posts = {filteredPosts} />
         </>
     );

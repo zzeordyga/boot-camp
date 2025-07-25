@@ -1,0 +1,28 @@
+{
+  "title": "Assignment 11",
+  "button": {
+    "addTask": "Tambah Tugas",
+    "delete": "Hapus"
+  },
+  "modal": {
+    "addTask": {
+      "title": "Tambah Tugas",
+      "description": "Tambahkan tugas baru ke daftar Anda",
+      "input": {
+        "title": "Nama Tugas",
+        "description": "Deskripsi Tugas"
+      },
+      "button": {
+        "cancel": "Batal",
+        "add": "Tambah"
+      },
+      "successMessage": "Tugas berhasil ditambahkan",
+      "error": {
+        "title": "Nama tugas harus diisi",
+        "description": "Deskripsi tugas harus diisi"
+      }
+    }
+  },
+  "noTasks": "Tugas tidak ditemukan",
+  "loading": "Memuat..."
+}

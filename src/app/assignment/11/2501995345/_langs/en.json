@@ -1,0 +1,28 @@
+{
+  "title": "Assignment 11",
+  "button": {
+    "addTask": "Add Task",
+    "delete": "Delete"
+  },
+  "modal": {
+    "addTask": {
+      "title": "Add Task",
+      "description": "Add a new task to your list",
+      "input": {
+        "title": "Task Name",
+        "description": "Task Description"
+      },
+      "button": {
+        "cancel": "Cancel",
+        "add": "Add"
+      },
+      "successMessage": "Task added successfully",
+      "error": {
+        "title": "Task name is required",
+        "description": "Task description is required"
+      }
+    }
+  },
+  "noTasks": "No tasks found",
+  "loading": "Loading..."
+}

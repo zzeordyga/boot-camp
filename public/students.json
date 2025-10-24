@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+	{
+    "name": "Charles Cahyadi",
+    "nim": "2602124152",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript"
+    }
   }
 ]

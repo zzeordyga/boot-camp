@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Wilmer Kwodeevan",
+    "nim": "2602056662",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Typescript"
+    }
   }
 ]

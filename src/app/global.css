@@ -1,0 +1,55 @@
+/* src/app/globals.css */
+
+/* Basic Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body and Typography Defaults */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Using a common sans-serif font */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  color: #2c3e50; /* Darker heading color */
+}
+
+/* Links */
+a {
+  color: #0070f3; /* Next.js blue */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Simple Container for Content Width */
+.container {
+  max-width: 1000px;
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Padding on sides */
+}
+
+/* Utility for Flexbox */
+.flex-group {
+  display: flex;
+  gap: 15px; /* Spacing between items */
+}
+
+/* Button Reset (if you add buttons later) */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

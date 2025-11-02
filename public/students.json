@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Catherine Natalie",
+    "nim": "2540123864",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Python"
+    }
   }
 ]

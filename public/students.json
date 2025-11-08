@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Raphael Vinzenzio Kent Hartono",
+    "nim": "2501995143",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "C#"
+    }
   }
 ]

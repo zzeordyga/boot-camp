@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
-  }
+  },
+	{
+		"name": "Gerald Pratama",
+		"nim": "2540121796",
+		"studyProgram": "Computer Science",
+		"additionalData": {
+			"favoriteLanguage": "C#",
+			"status": "alive and kicking"
+		}
+	}
 ]

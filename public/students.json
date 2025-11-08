@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+	{
+    "name": "Bryant Su",
+    "nim": "2602109643",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
   }
 ]

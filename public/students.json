@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Retno Shintya Hariyani",
+    "nim": "2540127370",
+    "studyProgram": "Computer Science",
+    "additionalData":{
+      "favoriteLanguage": "C"
+    }
   }
 ]

@@ -507,5 +507,15 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+   {
+    "name": "Yohanes Andrew Wijaya",
+    "nim": "2540126033",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Python",
+        "favoriteFood": "Fried Rice",
+        "funFact": "Twin"
+    }
   }
 ]

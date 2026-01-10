@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Juan Thoriq Pahlevi",
+    "nim": "2602232371",
+    "studyProgram": "Computer Science - Software Engineering",
+    "additionalData": {
+        "favoriteLanguage": "JavaScript",
+        "mbti": "ENTJ-A"
+    }
   }
 ]

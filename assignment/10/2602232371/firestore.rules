@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===== USERS COLLECTION =====
+    // Stores user metadata including roles (user/admin)
+    match /users/{userId} {
+      
+      // READ: Users can only read their own document
+      // This prevents users from seeing other users' data
+      allow read: if request.auth != null && request.auth.uid == userId;
+      
+      // CREATE: Any authenticated user can create their own document
+      // This is needed during registration
+      allow create: if request.auth != null;
+      
+      // UPDATE: Users can only update their own document
+      // Prevents users from changing other users' roles or data
+      allow update: if request.auth != null && request.auth.uid == userId;
+      
+      // DELETE: Only admins can delete user documents
+      // Checks if the requesting user has role="admin"
+      allow delete: if request.auth != null && 
+                       get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // ===== POSTS COLLECTION =====
+    // From Assignment 09 - posts with title, content, createdAt
+    match /posts/{postId} {
+      
+      // READ: Anyone can read posts (public)
+      allow read: if true;
+      
+      // CREATE: Only authenticated users can create posts
+      allow create: if request.auth != null;
+      
+      // UPDATE: Only authenticated users can update posts
+      // You could also add: && request.auth.uid == resource.data.authorId
+      // to ensure users can only update their own posts
+      allow update: if request.auth != null;
+      
+      // DELETE: Only admins can delete posts
+      allow delete: if request.auth != null && 
+                       get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+  }
+}

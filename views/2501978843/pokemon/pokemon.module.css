@@ -1,0 +1,100 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.image {
+  max-width: 250px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.types {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.typeBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* Warna berdasarkan tipe Pokémon */
+.grass { background: #78C850; }
+.fire { background: #F08030; }
+.water { background: #6890F0; }
+.bug { background: #A8B820; }
+.normal { background: #A8A878; }
+.poison { background: #A040A0; }
+.electric { background: #F8D030; }
+.ground { background: #E0C068; }
+.fairy { background: #EE99AC; }
+.fighting { background: #C03028; }
+.psychic { background: #F85888; }
+.rock { background: #B8A038; }
+.ghost { background: #705898; }
+.ice { background: #98D8D8; }
+.dragon { background: #7038F8; }
+.dark { background: #705848; }
+.steel { background: #B8B8D0; }
+.flying { background: #A890F0; }
+
+.info {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0.5rem 0;
+}
+
+.loader {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff4d4f;
+  animation: pulse 1.5s infinite;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e03131;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .image {
+    max-width: 200px;
+  }
+}

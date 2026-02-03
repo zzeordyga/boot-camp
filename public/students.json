@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Sebastian Putra Cahyadi",
+    "nim": "2540132383",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "C#"
+    }
   }
 ]

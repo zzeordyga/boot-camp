@@ -1,5 +1,14 @@
 [
   {
+    "name": "Steven Yong",
+    "nim": "2602136266",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Hobby": "Sleep",
+      "favoriteLanguage": "JavaScript"
+    }
+  },
+  {
     "name": "Fauzan Hafizh Zulfikar",
     "nim": "2201792032",
     "studyProgram": "Computer Science",

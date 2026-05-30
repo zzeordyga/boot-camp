@@ -507,5 +507,17 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Juan Xavier Soegiarto",
+    "nim": "2602105512",
+    "studyProgram": "Game Application and Technology",
+    "additionalData": {
+      "favoriteFood": "Cals Chicken",
+      "hobby": "Basketball",
+      "funFact": "I like tomboys because they are homies that's also pretty (Considering you choose the right ones).",
+      "quote": "Happiness has to be fought for",
+      "favoriteLanguage": "HTML, CSS, SQL, C#, Java & JavaScript"
+    }
   }
 ]

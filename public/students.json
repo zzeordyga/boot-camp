@@ -1,5 +1,15 @@
 [
   {
+    "name": "Kevin Petersen",
+    "nim": "2602136713",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Hobby": "Watch Film (Any Film), Learning, and Playing Games",
+      "favoriteLanguage": "Java, JavaScript, TypeScript",
+      "favoriteFramework": "React"
+    }
+  },
+  {
     "name": "Fauzan Hafizh Zulfikar",
     "nim": "2201792032",
     "studyProgram": "Computer Science",

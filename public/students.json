@@ -24,32 +24,32 @@
     }
   },
   {
-      "name": "Ziggy Z.",
-      "nim": "2101702761",
-      "studyProgram": "Computer Science",
-      "additionalData": {
-          "favoriteLanguage": "JavaScript"
-      }
+    "name": "Ziggy Z.",
+    "nim": "2101702761",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
   },
   {
-      "name": "Charles Yansen",
-      "nim": "2501978843",
-      "studyProgram": "Computer Science",
-      "additionalData": {
-          "favoriteLanguage": "JavaScript"
-      }
+    "name": "Charles Yansen",
+    "nim": "2501978843",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
   },
   {
-      "name": "Owen Maha Putra",
-      "nim": "2502000363",
-      "studyProgram": "Computer Science",
-      "additionalData": {
-          "favoriteLanguage": [
-              "JavaScript",
-              "SQL"
-          ],
-          "favoriteColor": "Blue"
-      }
+    "name": "Owen Maha Putra",
+    "nim": "2502000363",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": [
+        "JavaScript",
+        "SQL"
+      ],
+      "favoriteColor": "Blue"
+    }
   },
   {
     "name": "Barakhyel Agustorio Gulo",
@@ -67,17 +67,17 @@
       "favoriteLanguage": "JavaScript"
     }
   },
-
   {
     "name": "Zidane Wicaksono",
     "nim": "2501977973",
-    "studyProgram": "Computer Science"},
+    "studyProgram": "Computer Science"
+  },
   {
     "name": "Fabrian Osmond",
     "nim": "2501964390",
     "studyProgram": "Computer Science",
     "additionalData": {
-        "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "JavaScript"
     }
   },
   {
@@ -107,7 +107,6 @@
   {
     "name": "Safira SS",
     "nim": "2501992854",
-    
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"
@@ -123,7 +122,7 @@
   },
   {
     "name": "Andi Mataraja",
-    "nim": "2540124324", 
+    "nim": "2540124324",
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript"
@@ -146,12 +145,12 @@
     }
   },
   {
-	"name": "Ryan Bukhari",
-	"nim": "2401953436",
-	"studyProgram": "Computer Science",
-	"additionalData": {
-		"favoriteLanguage": "JavaScript"
-	  }
+    "name": "Ryan Bukhari",
+    "nim": "2401953436",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript"
+    }
   },
   {
     "name": "Roland Ramadan",
@@ -173,7 +172,6 @@
   {
     "name": "Mario Rizqi F",
     "nim": "2501966231",
-    
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "Javascript"
@@ -237,11 +235,14 @@
   },
   {
     "name": "Colliens Edward Susanto",
-    "nim" : "2540130296",
+    "nim": "2540130296",
     "studyProgram": "Computer Science",
     "university": "BINUS University",
     "batch": "2025",
-    "interests": ["Web Development", "UI/UX"],
+    "interests": [
+      "Web Development",
+      "UI/UX"
+    ],
     "additionalData": {
       "quote": "Work hard in silence, let success make the noise."
     }
@@ -260,7 +261,7 @@
     "studyProgram": "Game Application and Technology",
     "additionalData": {
       "favoriteLanguage": "JavaScript",
-	    "hobby": "Playing Game "
+      "hobby": "Playing Game "
     }
   },
   {
@@ -374,7 +375,11 @@
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript",
-      "hobbies": ["Coding", "Gaming", "Reading tech blogs"]
+      "hobbies": [
+        "Coding",
+        "Gaming",
+        "Reading tech blogs"
+      ]
     }
   },
   {
@@ -390,7 +395,7 @@
     "name": "Sekar Ajeng Suprobo Mukti",
     "nim": "2501979814",
     "studyProgram": "Computer Science",
-    "additionalData":{
+    "additionalData": {
       "favoriteLanguage": "JavaScript"
     }
   },
@@ -440,10 +445,23 @@
     "nim": "2301948624",
     "studyProgram": "Computer Science",
     "additionalData": {
-      "favoriteLanguage": ["Python", "JavaScript"],
-      "frameworks": ["React", "Vue", "Next.js"],
-      "versionControl": ["Git", "GitHub"],
-      "cssTechnologies": ["Tailwind CSS", "Bootstrap"]
+      "favoriteLanguage": [
+        "Python",
+        "JavaScript"
+      ],
+      "frameworks": [
+        "React",
+        "Vue",
+        "Next.js"
+      ],
+      "versionControl": [
+        "Git",
+        "GitHub"
+      ],
+      "cssTechnologies": [
+        "Tailwind CSS",
+        "Bootstrap"
+      ]
     }
   },
   {
@@ -452,7 +470,7 @@
     "studyProgram": "Computer Science",
     "additionalData": {
       "favoriteLanguage": "JavaScript",
-      "favoriteFood" : "Ice Cream"
+      "favoriteFood": "Ice Cream"
     }
   },
   {
@@ -483,7 +501,7 @@
     "name": "Imanuel Eklesio",
     "nim": "2440044190",
     "studyProgram": "Computer Science",
-    "additionalData":{
+    "additionalData": {
       "favoriteLanguage": "C#"
     }
   },
@@ -497,15 +515,24 @@
     "nim": "2502023511",
     "studyProgram": "Computer Science",
     "additionalData": {
-        "favoriteLanguage": "JavaScript"
+      "favoriteLanguage": "JavaScript"
     }
   },
-   {
+  {
     "name": "Michelle Valencia Nurdi",
     "nim": "2501959775",
     "studyProgram": "Computer Science",
     "additionalData": {
-        "favoriteLanguage": "Ruby"
+      "favoriteLanguage": "Ruby"
+    }
+  },
+  {
+    "name": "Ferry Febrian",
+    "nim": "2602076430",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "JavaScript",
+      "Hobby": "Running, Gym, Sleep"
     }
   }
 ]

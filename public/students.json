@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Kevin",
+    "nim": "2602076885",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "today's quote": "mabar bang"
+    }
   }
 ]

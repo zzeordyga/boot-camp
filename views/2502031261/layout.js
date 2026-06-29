@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Boot Camp Task - 12345678",
+  title: "Tatras Kennosya Destama Tamri - 2502031261",
   description: "React & Next.js integration assignment",
 };
 

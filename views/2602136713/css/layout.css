@@ -1,0 +1,41 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 72px;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 80px 16px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 72px 12px 12px;
+    }
+}

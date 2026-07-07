@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+    {
+    "name": "Justin Tjandra",
+    "nim": "2602095902",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "Quote": "Be your own version of yourself!"
+    }
   }
 ]

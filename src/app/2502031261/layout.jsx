@@ -6,7 +6,7 @@ const NimLayout = ({ children }) => {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', fontFamily: 'Arial, sans-serif', background: '#f8fafc' }}>
       <header style={{ background: '#0f172a', color: '#fff', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h1 style={{ fontSize: '1.1rem', margin: 0 }}>NIM 12345678 — Boot Camp Assignment</h1>
+        <h1 style={{ fontSize: '1.1rem', margin: 0 }}>Boot Camp Assignment</h1>
         <nav style={{ display: 'flex', gap: '1rem', fontSize: '0.9rem' }}>
           <Link href="/12345678" style={{ color: '#fff', textDecoration: 'none' }}>Posts</Link>
           <Link href="/12345678/details" style={{ color: '#fff', textDecoration: 'none' }}>Details</Link>

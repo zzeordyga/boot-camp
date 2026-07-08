@@ -507,5 +507,15 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Tatras Kennosya Destama Tamri",
+    "nim": "2502031261",
+    "studyProgram":"Mobile Application and Technology",
+    "additionalData": {
+      "favoriteFood": "Nasi Padang",
+      "Hobby": "play video games, read manga",
+      "favoriteLanguage": "HTML, Java"
+    }
   }
 ]

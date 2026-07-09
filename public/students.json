@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Kevin Hermanto",
+    "nim": "2602096716",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "C#, SQL, Javascript"
+    }
+
   }
 ]

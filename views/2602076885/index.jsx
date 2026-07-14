@@ -21,14 +21,12 @@ export default function KevinProfile() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <h1>Hello, I'm Kevin Stenly Liustanto 👋</h1>
+      <h1>Hello, I'm Kevins 👋</h1>
 
       <h2>NIM: 2602076885</h2>
 
       <p>
-        I am a Computer Science student at BINUS University. I am passionate
-        about technology, software development, data analysis, and continuously
-        learning new skills in IT.
+        Page ini tidak bisa tampil. Pakai yang di src/app/2602076885/page.jsx.
       </p>
 
       <h3>My Hobbies</h3>

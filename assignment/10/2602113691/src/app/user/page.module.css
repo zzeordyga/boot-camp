@@ -1,0 +1,21 @@
+.page {
+    padding: 10px;
+    background-color: aliceblue;
+    display: flex;
+    flex: 1;
+}
+
+.main {
+    width: 100%;
+}
+
+.table, .table td, .table th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.table {
+    width: 100%;
+    background-color: white;
+}

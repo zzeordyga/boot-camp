@@ -1,0 +1,66 @@
+.page {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.main {
+    width: 400px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+} 
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input {
+    padding: 10px;
+    background-color: rgb(237, 240, 243);
+    border: none;
+    border-radius: 10px;
+}
+
+.forgot-password {
+    text-align: right;
+}
+
+.btn-login {
+    padding: 10px;
+    background-color: rgb(158, 176, 255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: rgb(147, 167, 255);
+}
+
+.redirect-link {
+    margin-top: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.error {
+    color: red;
+    font-size: small;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}

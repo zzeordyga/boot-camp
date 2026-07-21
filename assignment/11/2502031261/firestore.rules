@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // For this assignment, tasks are open read/write for any client of the app
+    // (no auth requirement specified in the brief). In a real product you'd
+    // scope this to request.auth.uid, e.g. matching a userId field on each task.
+    match /tasks/{taskId} {
+      allow read: if true;
+
+      allow create: if request.resource.data.title is string
+                    && request.resource.data.title.size() > 0
+                    && request.resource.data.title.size() <= 200
+                    && request.resource.data.completed == false;
+
+      allow update: if request.resource.data.title is string
+                    && request.resource.data.title.size() > 0
+                    && request.resource.data.title.size() <= 200;
+
+      allow delete: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

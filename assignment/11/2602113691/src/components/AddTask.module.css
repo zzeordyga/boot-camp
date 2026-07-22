@@ -1,0 +1,60 @@
+.modal {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(194, 187, 178);
+    width: 350px;
+    height: 300px;
+    padding: 30px 20px;
+    border: 2px solid rgb(87, 87, 86);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.input-date-time {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.modal-btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.submit {
+    background-color: rgb(70, 151, 218);
+}
+
+.submit:hover {
+  background-color: rgb(60, 129, 185);
+}
+
+.close:hover {
+    background-color: #dbdbdb;
+}

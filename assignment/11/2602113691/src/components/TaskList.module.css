@@ -1,0 +1,97 @@
+.card {
+    background-color: antiquewhite;
+    padding: 20px;  
+    width: 100%;
+}
+
+.card h1{
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.Completed {
+    background-color: rgb(248, 248, 234);
+}
+
+.Terminated {
+    background-color: rgb(172, 172, 172);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0 0 0;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(238, 234, 234);
+}
+
+.btn-finish {
+    background-color: rgb(70, 151, 218);
+}
+
+.btn-finish:disabled {
+    cursor: not-allowed
+}
+
+.btn-finish:hover {
+    background-color: rgb(60, 129, 185);
+}
+
+.btn-terminate {
+    background-color: rgb(255, 122, 122);
+}
+
+.btn-terminate:disabled {
+    cursor: not-allowed
+}
+
+.btn-terminate:hover {
+    background-color: rgb(202, 98, 98);
+}
+
+.dark.card {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+}
+
+.dark.Completed {
+    background-color: #344a36;
+}
+
+.dark.Terminated {
+    background-color: #4a3434;
+}
+
+.dark.buttons button {
+    color: white;
+}
+
+.dark.btn-finish {
+    background-color: #3b82f6;
+}
+
+.dark.btn-finish:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.dark.btn-terminate {
+    background-color: #ef4444;
+}
+
+.dark.btn-terminate:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.dark.btn-finish:disabled,
+.dark.btn-terminate:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

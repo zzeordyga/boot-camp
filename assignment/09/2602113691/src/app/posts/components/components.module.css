@@ -1,0 +1,100 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  background-color: black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 500px;
+}
+
+.title-text {
+  margin-bottom: 5px;
+}
+
+.time-stamp {
+  margin-bottom: 20px;
+  color: rgb(151, 151, 151);
+}
+
+.search {
+  margin: 20px auto;
+  width: 500px;
+  padding: 10px;
+}
+
+.add-post-btn {
+  width: 500px;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(28, 187, 187);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.add-post-btn:hover {
+  background-color: rgb(28, 139, 139);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  height: 380px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.submit {
+    background-color: rgb(28, 187, 187);
+}
+
+.submit:hover {
+  background-color: rgb(28, 139, 139);
+}
+
+.close:hover {
+    background-color: #4d4d4d;
+}
+

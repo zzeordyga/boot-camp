@@ -12,8 +12,8 @@ export default function page() {
           <h1 className={styles.h1}>Task Management App</h1>
           {/* fetch data yang ada di firestore sesuai pengguna */}
           {/* btn add data */}
-          <button>Add New Tasks</button>
           <ThemeBtn/>
+          <button>Add New Tasks</button>
       </div>
     </ProtectedRoute>
   )

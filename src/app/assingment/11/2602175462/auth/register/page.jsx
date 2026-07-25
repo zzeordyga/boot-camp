@@ -76,6 +76,13 @@ export default function RegisterPage() {
         try{
             const userInfo = await createUserWithEmailAndPassword(auth, email, password);
             await setDoc(doc(db, "users", userInfo.user.uid),{name, email, role:"user", createdAt: serverTimestamp()})
+            await setDoc(doc(db, "tasks", userInfo.user.uid), {createdAt: serverTimestamp()});
+            await setDoc(doc(db, "tasks", userInfo.user.uid, "tasks", "Your New Tasks"),
+                {
+                    value:"Create your next custom tasks",
+                    isDone:false,
+                }
+            )
             console.log(`firestore success`);
             console.log(userInfo);
             alert(`Success, now go to login and login with your account`);

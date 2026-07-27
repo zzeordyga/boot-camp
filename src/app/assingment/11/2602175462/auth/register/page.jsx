@@ -77,7 +77,7 @@ export default function RegisterPage() {
             const userInfo = await createUserWithEmailAndPassword(auth, email, password);
             await setDoc(doc(db, "users", userInfo.user.uid),{name, email, role:"user", createdAt: serverTimestamp()})
             await setDoc(doc(db, "tasks", userInfo.user.uid), {createdAt: serverTimestamp()});
-            await setDoc(doc(db, "tasks", userInfo.user.uid, "tasks", "Your New Tasks"),
+            await setDoc(doc(db, "tasks", userInfo.user.uid, "tasks", "0"),
                 {
                     value:"Create your next custom tasks",
                     isDone:false,

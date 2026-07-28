@@ -88,18 +88,19 @@ export default function page() {
         <ThemeBtn/>
         <h2>Tasks List</h2>
         {tasks.map((task)=>(
-            <div key={task.id}>
-              {/* <h3>{task.id}</h3> */}
-              <h3>Task: {task.value}</h3>
+            <div key={task.id} className={styles.taskContainer}>
               <label>
                 <input type="checkbox" checked={task.isDone} onChange={() => handleToogleDone(task.id, task.isDone)} />
-                {task.isDone ? "Done" : "Not done"}
+                {task.isDone ? "" : ""}
               </label>
+              {/* <h3>{task.id}</h3> */}
+              <h3 className={`${styles.m} ${task.isDone ? styles.done : ""}`}>{task.value}</h3>
+              <button>Edit</button>
               {/* <p>Done : {task.isDone ? "Done" : "Not Done"}</p> */}
             </div>
           ))}
 
-          <h2>Input your new tasks: </h2>
+          <h2>Add new tasks: </h2>
           <input type="text" value={newTasks} onChange={(e)=> setNewTasks(e.target.value)}/>
           <button onClick={handleAddTask}>Add Tasks</button>
       </div>

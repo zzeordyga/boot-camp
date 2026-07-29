@@ -1,11 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { collection, onSnapshot, doc, addDoc, updateDoc, deleteDoc, getDoc } from "firebase/firestore";
-import { db, auth } from "../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { collection, onSnapshot, doc, addDoc, updateDoc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase";
 import Script from "next/script";
+import { getBadgeColor as badgeColor } from '../utils/badgeColor';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+import { SettingsProvider, useSettings } from '../context/SettingsContext';
 
-export default function Homepage() {
+function HomepageContent() {
+    const { language, toggleLanguage } = useSettings();
+    const [sortOrder, setSortOrder] = useLocalStorage('sortOrder', 'desc');
     const [loading, setLoading] = useState(true);
     const [task, setTask] = useState([]);
     const [error, setError] = useState(null);
@@ -126,23 +130,17 @@ export default function Homepage() {
         setAddModal(true);
     }
 
-    const badgeColor = (tag) => {
-        switch (tag?.toLowerCase()) {
-            case 'home':
-                return 'bg-[#d1fae5] text-[#047857] border-[#a7f3d0]';
-            case 'office':
-                return 'bg-[#e0f2fe] text-[#0369a1] border-[#bae6fd]';
-            case 'study':
-                return 'bg-[#ede9fe] text-[#6d28d9] border-[#ddd6fe]';
-            case 'personal':
-                return 'bg-[#fef3c7] text-[#b45309] border-[#fde68a]';
-            default:
-                return 'bg-[#fef3c7] text-[#b45309] border-[#fde68a]';
+    // Sort tasks before rendering based on sortOrder (desc = newest first, asc = oldest first)
+    const sortedTasks = [...task].sort((a, b) => {
+        if (sortOrder === 'asc') {
+            return a.due_date > b.due_date ? 1 : -1;
+        } else {
+            return a.due_date < b.due_date ? 1 : -1;
         }
-    }
+    });
 
     return (
-        <main className="font-sans">
+        <main className="font-sans transition-colors duration-300">
             <Script src="https://unpkg.com/@tailwindcss/browser@4" strategy="lazyOnload" />
             <style>{`
                 body {
@@ -156,13 +154,22 @@ export default function Homepage() {
             `}>
                 <h1 className={`
                     text-3xl md:text-[32px] 
-                    font-bold text-[#1e3a22] font-serif
+                    font-bold text-[#1e3a22] font-serif dark:text-white
                 `}>
-                    Tasku
+                    {language === 'en' ? 'Tasku' : 'Tugasku'}
                 </h1>
-                <h3 className="mb-5 text-[#6b5740]">
-                    Let's make today productive 🌿
+                <h3 className="mb-5 text-[#6b5740] dark:text-gray-300">
+                    {language === 'en' ? "Let's make today productive 🌿" : "Mari produktif hari ini 🌿"}
                 </h3>
+                
+                <div className="flex gap-3 mt-4 mb-4">
+                    <button onClick={toggleLanguage} className="px-3 py-1 bg-white border border-[#c1896a]/20 text-[#8a7060] rounded-md text-sm hover:bg-[#f0e8e0]">
+                        🌐 {language === 'en' ? 'ID' : 'EN'}
+                    </button>
+                    <button onClick={() => setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc')} className="px-3 py-1 bg-white border border-[#c1896a]/20 text-[#8a7060] rounded-md text-sm hover:bg-[#f0e8e0]">
+                        🔃 Sort by Date: {sortOrder === 'desc' ? 'Newest' : 'Oldest'}
+                    </button>
+                </div>
 
                 <div className="mt-4">
                     <button onClick={() => setAddModal(true)}
@@ -222,7 +229,7 @@ export default function Homepage() {
                     </button>
                 </div>
                 {/**task list */}
-                {task
+                {sortedTasks
                     .filter((t) => {
                         if (filterStatus === 'All') return true;
                         if (filterStatus === 'To Do') return t.status === 'todo';
@@ -406,6 +413,12 @@ export default function Homepage() {
         </main>
     )
 
+}
 
-
+export default function Homepage() {
+    return (
+        <SettingsProvider>
+            <HomepageContent />
+        </SettingsProvider>
+    );
 }

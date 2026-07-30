@@ -1,0 +1,16 @@
+.modeBtn{
+    background-color: var(--card);
+    border: var(--card) solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.modeBtn:hover{
+    background-color: var(--text);
+    border: var(--text) solid;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--card);
+}

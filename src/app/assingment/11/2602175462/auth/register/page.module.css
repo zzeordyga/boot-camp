@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 90vh;
+    /* background-color: aqua; */
+}
+
+.mainContainer{
+    background-color: gray;
+    padding: 2rem;
+    border-radius: 16px;
+    border: solid black 2px;
+}
+
+.input{
+    min-width: 90%;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 16px;
+    border: solid black 1px;
+    margin: 2px;
+}
+
+.input:hover{
+    cursor:text;
+}
+
+.button{
+    min-width: 100%;
+    background-color: white;
+    border: solid black 1px;
+    padding: 0.5rem;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.errors{
+    color: red;
+    margin: 8px;
+}

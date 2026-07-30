@@ -1,0 +1,197 @@
+.container {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.addTask {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.inputGroup input {
+    flex: 1;
+    padding: 10px;
+}
+
+.taskList {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.addBtn{
+    background-color: greenyellow;
+    border: greenyellow solid;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.addBtn:hover{
+    background-color: rgb(102, 146, 37);
+    border: rgb(102, 146, 37) solid;
+    color: white;
+}
+
+.logoutBtn{
+    background-color: var(--card);
+    border: var(--card) solid;
+    color: var(--text);
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.logoutBtn:hover{
+    background-color: var(--text);
+    border: var(--text) solid;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--card);
+}
+
+.editBtn{
+    background-color: yellow;
+    border: yellow solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.editBtn:hover{
+    background-color: rgb(141, 141, 33);
+    border: rgb(141, 141, 33) solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.deleteBtn{
+    background-color: rgb(254, 52, 52);
+    border: rgb(254, 52, 52) solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover{
+    background-color: rgb(151, 41, 41);
+    border: rgb(151, 41, 41) solid;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.taskContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    background: var(--card);
+}
+
+.taskText {
+    flex: 1;
+    margin: 0;
+}
+
+.editInput {
+    flex: 1;
+    padding: 8px;
+}
+
+.taskButtons {
+    display: flex;
+    /* background-color: red; */
+    gap: 10px;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+    opacity: .7;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        /* align-items: stretch; */
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .inputGroup {
+        flex-direction: column;
+    }
+
+    .inputGroup button {
+        width: 100%;
+    }
+
+    .taskContainer {
+        flex-direction: row;
+        width: 100%;
+        /* align-items: flex-start; */
+    }
+
+    .taskButtons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .taskText,
+    .editInput {
+        width: 100%;
+    }
+}

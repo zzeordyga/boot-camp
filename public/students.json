@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name":"Timotius",
+    "nim": "2602175462",
+    "studyProgram": "Computer Science",
+    "additionalData":{
+      "greetings": "if you read this, have a nice day"
+    }
   }
 ]

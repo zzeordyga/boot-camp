@@ -8,8 +8,9 @@ import './globals.css'
 import { useEffect, useState } from 'react'
 import { collection, onSnapshot, snapshotEqual, getDocs, doc, setDoc, getDoc, updateDoc, deleteDoc, addDoc } from 'firebase/firestore'
 import { db, auth } from './firebase/Init'
-import { onAuthStateChanged, validatePassword } from 'firebase/auth';
+import { onAuthStateChanged, validatePassword, signOut } from 'firebase/auth';
 import { useAsyncError } from 'react-router';
+import { useRouter } from 'next/navigation';
 
 
 export default function Page() {
@@ -17,6 +18,7 @@ export default function Page() {
   const [newTasks, setNewTasks] = useState("");
   const [editingId, setEditingId] = useState(null);
   const [editValue, setEditValue] = useState("");
+  const router = useRouter();
 
 
   useEffect(()=>{
@@ -126,14 +128,31 @@ export default function Page() {
     }
   }
 
+  const handleLogout = async ()=>{
+    try{
+      await signOut(auth);
+      router.replace("/assingment/11/2602175462/auth/login")
+      console.log("Logout berhasil");
+    } catch(error) {
+      console.error("Logout gagal:", error);
+      
+    }
+  }
+
   return (
     <ProtectedRoute>
       <div className={styles.container}>
-        <h1 className={styles.h1}>Task Management App</h1>
-        {/* fetch data yang ada di firestore sesuai pengguna */}
-        {/* btn add data */}
-        <ThemeBtn/>
-        <h2>Tasks List</h2>
+        <div className={styles.top}>
+          <h1 className={styles.h1}>Task Management App</h1>
+          <button onClick={handleLogout}>Logout</button>
+          <ThemeBtn/>
+        </div>
+        <div className={styles.top2}>
+          <h3>Add new tasks: </h3>
+          <input type="text" value={newTasks} onChange={(e)=> setNewTasks(e.target.value)}/>
+          <button onClick={handleAddTask}>Add Tasks</button>
+        </div>
+          <h2>Tasks List</h2>
         {tasks.map((task)=>(
             <div key={task.id} className={styles.taskContainer}>
               <label>
@@ -168,9 +187,6 @@ export default function Page() {
             </div>
           ))}
 
-          <h2>Add new tasks: </h2>
-          <input type="text" value={newTasks} onChange={(e)=> setNewTasks(e.target.value)}/>
-          <button onClick={handleAddTask}>Add Tasks</button>
       </div>
     </ProtectedRoute>
   )

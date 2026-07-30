@@ -142,52 +142,82 @@ export default function Page() {
   return (
     <ProtectedRoute>
       <div className={styles.container}>
-        <div className={styles.top}>
-          <h1 className={styles.h1}>Task Management App</h1>
-          <button onClick={handleLogout}>Logout</button>
-          <ThemeBtn/>
-        </div>
-        <div className={styles.top2}>
-          <h3>Add new tasks: </h3>
-          <input type="text" value={newTasks} onChange={(e)=> setNewTasks(e.target.value)}/>
-          <button onClick={handleAddTask}>Add Tasks</button>
-        </div>
-          <h2>Tasks List</h2>
-        {tasks.map((task)=>(
+        <header className={styles.header}>
+          <h1>Task Management App</h1>
+
+          <div className={styles.actions}>
+            <button onClick={handleLogout} className={styles.logoutBtn}>Logout</button>
+            <ThemeBtn />
+          </div>
+        </header>
+
+        <section className={styles.addTask}>
+          <h3>Add New Task</h3>
+
+          <div className={styles.inputGroup}>
+            <input
+              type="text"
+              value={newTasks}
+              onChange={(e) => setNewTasks(e.target.value)}
+              placeholder='ex: make a breakfast'
+            />
+            <button onClick={handleAddTask} className={styles.addBtn}>Add</button>
+          </div>
+        </section>
+
+        <h2>Tasks List</h2>
+
+        <div className={styles.taskList}>
+          {tasks.map((task) => (
             <div key={task.id} className={styles.taskContainer}>
               <label>
-                <input type="checkbox" checked={task.isDone} onChange={() => handleToogleDone(task.id, task.isDone)} />
-                {task.isDone ? "" : ""}
+                <input
+                  type="checkbox"
+                  checked={task.isDone}
+                  onChange={() =>
+                    handleToogleDone(task.id, task.isDone)
+                  }
+                />
               </label>
-              {/* <h3>{task.id}</h3> */}
-              {/* <h3 className={`${styles.m} ${task.isDone ? styles.done : ""}`}>{task.value}</h3> */}
-              {
-                editingId === task.id ?(
-                  <input type='text' value={editValue} onChange={(e)=> setEditValue(e.target.value)}/>
+
+              {editingId === task.id ? (
+                <input
+                  type="text"
+                  value={editValue}
+                  onChange={(e) => setEditValue(e.target.value)}
+                  className={styles.editInput}
+                />
+              ) : (
+                <h3
+                  className={`${styles.taskText} ${
+                    task.isDone ? styles.done : ""
+                  }`}
+                >
+                  {task.value}
+                </h3>
+              )}
+
+              <div className={styles.taskButtons}>
+                {editingId === task.id ? (
+                  <button onClick={handleDone} className={styles.addBtn}>Done</button>
                 ) : (
-                  <h3 className={`${styles.m} ${task.isDone ? styles.done : ""}`}>{task.value}</h3>
-                )
-              }
+                  <button onClick={() => handleEdit(task)} className={styles.editBtn}>
+                    Edit
+                  </button>
+                )}
 
-              {/* edit */}
-              {
-                editingId === task.id ? (
-                  <button onClick={handleDone}>Done</button>
-                ) : (
-                  <button onClick={()=> handleEdit(task)}>Edit</button>
-                )
-              }
-
-              <button onClick={()=> handleDeleteTask(task.id)} disabled={editingId === task.id}>Delete</button>
-
-
-
-
-              {/* <p>Done : {task.isDone ? "Done" : "Not Done"}</p> */}
+                <button
+                  onClick={() => handleDeleteTask(task.id)}
+                  disabled={editingId === task.id}
+                  className={styles.deleteBtn}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
-
+        </div>
       </div>
     </ProtectedRoute>
-  )
+  );
 }

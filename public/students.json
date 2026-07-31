@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Calvin Christian Ho",
+    "nim": "2602103904",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "HTML",
+        "additionalWords": "Hello I guess :|"
+    }
   }
 ]

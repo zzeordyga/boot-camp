@@ -507,5 +507,17 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Ljunghans Olive Wijaya",
+    "nim": "2501967184",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": [
+        "Rust",
+        "Python",
+        "Haskell"
+      ]
+    }
   }
 ]

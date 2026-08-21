@@ -1,7 +1,7 @@
-'use client'
 // CTRL + P: search & open file by name
 // ALT + Shift + Up/Down Arrow: copy current line to another line
 'use client'
+import '../tailwind.css';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -81,27 +81,27 @@ function App() {
           ))
         }
       </select>
-      <table>
+      <table className='table-fixed border-collapse border border-gray-400'>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>NIM</th>
-            <th>Study Program</th>
-            <th>Additional Data</th>
-            <th>Action</th>
+            <th className='border border-gray-300 px-4 py-2'>Name</th>
+            <th className='border border-gray-300 px-4 py-2'>NIM</th>
+            <th className='border border-gray-300 px-4 py-2'>Study Program</th>
+            <th className='border border-gray-300 px-4 py-2'>Additional Data</th>
+            <th className='border border-gray-300 px-4 py-2'>Action</th>
           </tr>
         </thead>
         <tbody>
           {
             filteredData.map((student, i) => {
               return (
-                <tr>
-                  <td>{student.name}</td>
-                  <td>{student.nim}</td>
-                  <td>{student.studyProgram}</td>
-                  <td>{student.additionalData ? JSON.stringify(student.additionalData) : ''}</td>
-                  <td>
-                    <button onClick={() => redirectToStudentPage(student.nim)}>View</button>
+                <tr key={student.nim}>
+                  <td className='border border-gray-300 px-2'>{student.name}</td>
+                  <td className='border border-gray-300 px-2'>{student.nim}</td>
+                  <td className='border border-gray-300 px-2'>{student.studyProgram}</td>
+                  <td className='border border-gray-300 px-2'>{student.additionalData ? JSON.stringify(student.additionalData) : ''}</td>
+                  <td className='border border-gray-300 px-2 py-1'>
+                    <button className='rounded-lg p-1 bg-indigo-400 transition ease-in duration-100 hover:bg-indigo-500' onClick={() => redirectToStudentPage(student.nim)}>View</button>
                   </td>
                 </tr>
               )

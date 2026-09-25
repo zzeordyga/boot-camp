@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Nursechan Arya Pamungkas",
+    "nim": "2501985483",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Python"
+    }
   }
 ]

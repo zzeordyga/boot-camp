@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Alif Arya Ramadhan",
+    "nim": "2602157440",
+    "studyProgram": "Software Engineering",
+    "additionalData": {
+      "favoriteLanguage": ["JavaScript", "Golang"],
+      "hobby": "cycling"
+    }
   }
 ]

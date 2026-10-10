@@ -507,5 +507,14 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Yosef Ezekiel Gandhi Sogemaking",
+    "nim": "2602193894",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "hobby": "Football",
+      "quote": "Spray and Pray in coding terms"
+    }
   }
 ]

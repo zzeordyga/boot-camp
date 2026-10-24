@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function userPath(uid) {
+      return /databases/$(database)/documents/users/$(uid);
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && exists(userPath(request.auth.uid))
+        && get(userPath(request.auth.uid)).data.role == 'admin';
+    }
+
+    function validName(name) {
+      return name is string && name.size() >= 1 && name.size() <= 50;
+    }
+
+    function changedOnly(fields) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(fields);
+    }
+
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isAdmin());
+
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['name', 'email', 'role', 'createdAt'])
+        && request.resource.data.keys().hasAll(['name', 'email', 'role', 'createdAt'])
+        && validName(request.resource.data.name)
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.role == 'user'
+        && request.resource.data.createdAt == request.time;
+
+      allow update: if signedIn() && (
+        (request.auth.uid == uid
+          && changedOnly(['name'])
+          && validName(request.resource.data.name))
+        || (isAdmin()
+          && request.auth.uid != uid
+          && changedOnly(['role'])
+          && request.resource.data.role in ['user', 'admin'])
+      );
+
+      allow delete: if false;
+    }
+  }
+}

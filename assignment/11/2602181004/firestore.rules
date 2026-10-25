@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function taskFields() {
+      return ['title', 'description', 'priority', 'completed', 'createdAt', 'updatedAt'];
+    }
+
+    function validTask(data) {
+      return data.keys().hasOnly(taskFields())
+        && data.keys().hasAll(taskFields())
+        && data.title is string
+        && data.title.size() >= 1
+        && data.title.size() <= 100
+        && !data.title.matches('\\s*')
+        && data.description is string
+        && data.description.size() <= 500
+        && data.priority in ['low', 'medium', 'high']
+        && data.completed is bool
+        && data.updatedAt == request.time;
+    }
+
+    match /tasks/{taskId} {
+      allow read: if true;
+
+      allow create: if validTask(request.resource.data)
+        && request.resource.data.completed == false
+        && request.resource.data.createdAt == request.time;
+
+      allow update: if validTask(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt;
+
+      allow delete: if true;
+    }
+  }
+}

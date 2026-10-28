@@ -1,0 +1,45 @@
+.box {
+  border: 1px solid #e3b5b0;
+  border-left: 4px solid #c0392b;
+  background: #fdf3f2;
+  border-radius: 6px;
+  padding: 20px 22px;
+  color: #1b2430;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.text {
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+
+.detail {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: #6b3a35;
+  overflow-wrap: anywhere;
+}
+
+.button {
+  font: inherit;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1b2430;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #2d3a4b;
+}
+
+.button:focus-visible {
+  outline: 3px solid #f5a300;
+  outline-offset: 2px;
+}

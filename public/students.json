@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Malvin",
+    "nim": "2602084395",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "hobby": "music"
+    }
   }
 ]

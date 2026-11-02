@@ -1,0 +1,61 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- Helper functions ----------
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Role is read from the user's own document in /users
+    function isAdmin() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Server-side validation for a new user profile
+    function isValidNewUser(uid) {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['uid', 'name', 'email', 'role', 'createdAt'])
+        && d.uid == uid
+        && d.name is string && d.name.size() >= 3 && d.name.size() <= 50
+        && d.email is string && d.email == request.auth.token.email
+        && d.role == 'user'                  // nobody can register as admin
+        && d.createdAt == request.time;
+    }
+
+    // ---------- users collection ----------
+    match /users/{uid} {
+      // Owner reads own profile, admin reads everyone
+      allow read: if isOwner(uid) || isAdmin();
+
+      // Register: only for yourself, always with role "user"
+      allow create: if isOwner(uid) && isValidNewUser(uid);
+
+      // Owner may change only their name (role is locked)
+      allow update: if isOwner(uid)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 3
+        && request.resource.data.name.size() <= 50;
+
+      // Admin may change role only, to a valid value
+      allow update: if isAdmin()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['role'])
+        && request.resource.data.role in ['user', 'admin'];
+
+      allow delete: if isAdmin();
+    }
+
+    // Deny everything else by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

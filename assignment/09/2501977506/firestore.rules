@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Assignment/demo only: public read + create on posts. Tighten before real use.
+    match /posts/{postId} {
+      allow read, create: if true;
+    }
+  }
+}

@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+   {
+    "name": "Muhammad Evran Khadafi",
+    "nim": "2602180802",
+    "studyProgram": "Computer Science - Software Engineering",
+    "additionalData": {
+      "hobby": "Watch KDrama and Playing Video Games"
+    }
   }
 ]

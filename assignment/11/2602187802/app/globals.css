@@ -1,0 +1,256 @@
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1a1d23;
+  --text-muted: #5c6470;
+  --border: #d8dde6;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-text: #ffffff;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --danger-text: #ffffff;
+  --error-bg: #fef2f2;
+  --error-text: #b91c1c;
+}
+
+[data-theme="dark"] {
+  --bg: #111418;
+  --surface: #1b2028;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #2e3642;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-text: #ffffff;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --danger-text: #ffffff;
+  --error-bg: #3b1719;
+  --error-text: #fca5a5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.settings-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 0.875rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.setting-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+input[type="text"],
+select,
+button {
+  font: inherit;
+  min-height: 44px;
+  border-radius: 6px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-text);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: var(--danger-text);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--danger-hover);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 0.875rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.task-main input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.task-title {
+  word-break: break-word;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-edit-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-actions button {
+  flex: 1;
+}
+
+.status-message {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 1.5rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0;
+}
+
+.error-message {
+  margin: 0;
+  padding: 0.625rem 0.875rem;
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .settings-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .task-form-row {
+    flex-direction: row;
+  }
+
+  .task-form-row button {
+    flex-shrink: 0;
+    min-width: 110px;
+  }
+
+  .task-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .task-actions button {
+    flex: initial;
+  }
+}

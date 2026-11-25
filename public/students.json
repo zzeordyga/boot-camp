@@ -507,5 +507,19 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Bryan Amadeus",
+    "nim": "2502044264",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+		"favoriteLanguage": ["Python", "JavaScript", "Java"],
+		"currentEmployment": "Unemployed",
+		"hobbies": [ "Photography", "UI design", "Dungeons and Dragons", "Watching movies"],
+		"single": true,
+		"email": "bryan.amadeus45@gmail.com",
+		"gurt": "yo",
+		"hotel": "trivago"
+  }
   }
 ]

@@ -507,5 +507,13 @@
     "additionalData": {
         "favoriteLanguage": "Ruby"
     }
+  },
+  {
+    "name": "Khair Jafin Awali",
+    "nim": "2602191024",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+      "favoriteLanguage": "Golang"
+    }
   }
 ]

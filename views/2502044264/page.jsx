@@ -1,10 +1,13 @@
+"use client";
+
 import { useEffect, useState, useRef, useMemo } from "react";
+import Divider from "./Divider";
+import Link from "next/link";
 
 export default function Page() {
 	const [count, setCount] = useState(0);
 	const [setup, setSetup] = useState("");
 	const [punchline, setPunchline] = useState("");
-	const secretCount = useRef(0);
 
 	useEffect(() => {
 		fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=twopart")
@@ -15,44 +18,78 @@ export default function Page() {
 			});
 	}, [count]);
 
-	function handleClick() {
-		secretCount.current = secretCount.current + 1;
-	}
+	const inputElement = useRef < HTMLInputElement > null;
+	const focusInput = () => {
+		inputElement.current?.focus();
+	};
 
-	const [name, setName] = useState("John");
+	const [address, setAddress] = useState("123 Wrong St, Cambridge, Massachusetts, USA");
 	const [price, setPrice] = useState(100);
 
 	const totalPrice = useMemo(() => {
 		const tax = price / 5;
+		console.log("Your price has been calculated!");
+
 		return price + tax;
 	}, [price]);
 
 	return (
-		<main style={{ margin: 20 }}>
-			<h1>Bryan Amadeus / 2502044264</h1>
-			<p>
-				Computer Science is a prodi learning the various kinds of computers, their
-				interactions with each other and us, and so much more.
-			</p>
-			{/* useState */}
-			<h3>Counter: {count}</h3>
-			<button onClick={() => setCount(count + 1)}>Add 1 & resets joke</button>
+		<div>
+			<h1 className="text-3xl font-bold">Bryan Amadeus' Page</h1>
+			<h2 className="text-2xl mb-3">2502044264</h2>
+			<Link
+				href="/details"
+				className="bg-gray-200 hover:bg-gray-100 text-gray-600 text-sm font-semibold py-1 px-2 border border-gray-400 rounded shadow"
+			>
+				Learn more
+			</Link>
 
-			{/* useEffect */}
+			<Divider />
+			<h3 className="text-xl font-bold mb-2">useState</h3>
+			<p className="mb-1">Counter: {count}</p>
+			<button
+				onClick={() => setCount(count + 1)}
+				className="bg-blue-400 hover:bg-blue-700 text-white py-2 px-4 rounded"
+			>
+				Add 1 (also resets joke)
+			</button>
+
+			<Divider />
+			<h3 className="text-xl font-bold mb-2">useEffect</h3>
 			<h3>Random joke: </h3>
 			<p>{setup}</p>
 			<p>{punchline}</p>
 
-			{/* useRef */}
-			<h3>Secret Counter: {secretCount.current}</h3>
-			<button onClick={handleClick}>Add secretly</button>
+			<Divider />
+			<h3 className="text-xl font-bold mb-2">useRef</h3>
+			<div>
+				<input
+					type="text"
+					ref={inputElement}
+					placeholder="Enter your text"
+					className="rounded p-1 border border-gray-300"
+				/>
+				<button onClick={focusInput} className="ml-2 bg-gray-300 p-1 rounded">
+					Focus Input
+				</button>
+			</div>
 
-			{/* useMemo */}
-			<h3>
-				Name --- total: {name} --- {totalPrice}
-			</h3>
-			<button onClick={() => setName("Fable")}>Change name</button>
-			<button onClick={() => setPrice(price + 100)}>Change price</button>
-		</main>
+			<Divider />
+			<h3 className="text-xl font-bold mb-2">useMemo</h3>
+			<p>Address: {address}</p>
+			<p>Total: {totalPrice}</p>
+			<button
+				onClick={() => setAddress("XYZ Right St, Jakarta Barat, DKI Jakarta, Indonesia")}
+				className="bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded"
+			>
+				Change Address
+			</button>
+			<button
+				onClick={() => setPrice(price + 100)}
+				className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded"
+			>
+				Change price
+			</button>
+		</div>
 	);
 }

@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link href="/" className="brand">FirebaseAuth</Link>
+      <Link href="/" className="brand">Firebase Auth Test</Link>
       <div className="nav-links">
         {loading ? null : user ? (
           <>

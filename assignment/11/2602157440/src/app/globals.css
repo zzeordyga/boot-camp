@@ -1,0 +1,395 @@
+:root,
+[data-theme='light'] {
+  --bg: #f4f5f9;
+  --surface: #ffffff;
+  --surface-2: #f0f2f7;
+  --text: #1c1f2a;
+  --muted: #5d6475;
+  --border: #dde1ea;
+  --primary: #4f46e5;
+  --primary-text: #ffffff;
+  --danger: #dc2626;
+  --danger-soft: #fdecec;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 4px 16px rgba(16, 24, 40, 0.06);
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #0f1117;
+  --surface: #181b24;
+  --surface-2: #222634;
+  --text: #e8eaf1;
+  --muted: #9aa2b5;
+  --border: #2e3344;
+  --primary: #818cf8;
+  --primary-text: #0f1117;
+  --danger: #f87171;
+  --danger-soft: #3a1d22;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  min-width: 0;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.brand-author {
+  margin: 0.125rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  background: var(--surface-2);
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.lang-btn.is-active {
+  background: var(--primary);
+  color: var(--primary-text);
+}
+
+.theme-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 999px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.tagline {
+  margin: 0.5rem 0 1rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+/* ---------- Controls ---------- */
+.input,
+.select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.select {
+  width: auto;
+  padding-right: 0.5rem;
+}
+
+.input:focus,
+.select:focus,
+.btn:focus-visible,
+.lang-btn:focus-visible,
+.task-check:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary);
+  filter: brightness(1.08);
+}
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--danger);
+  filter: brightness(1.08);
+}
+
+.btn-danger-outline {
+  color: var(--danger);
+}
+
+/* ---------- Form & toolbar ---------- */
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-form .input {
+  flex: 1;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.progress {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- States ---------- */
+.state {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0.5rem;
+  margin: 0;
+}
+
+.alert {
+  margin: 0.75rem 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Task list ---------- */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.task-item:first-child {
+  border-top: 0;
+}
+
+.task-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.task-check {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0.2rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.task-title {
+  overflow-wrap: anywhere;
+}
+
+.task-item.is-done .task-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.task-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.task-confirm-text {
+  font-size: 0.9rem;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.task-edit {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.task-edit .input {
+  flex: 1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 560px) {
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 0.85rem;
+    border-radius: 12px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .task-actions,
+  .task-confirm {
+    justify-content: flex-end;
+  }
+
+  .task-edit {
+    flex-direction: column;
+  }
+
+  .task-edit .task-actions {
+    justify-content: flex-end;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort {
+    justify-content: space-between;
+  }
+}

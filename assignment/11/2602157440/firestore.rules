@@ -1,0 +1,35 @@
+rules_version = '2';
+
+// Rules untuk collection 'tasks' (app ini tidak memakai login).
+// Jika project Firebase sudah punya rules lain (mis. collection 'users'),
+// cukup salin blok `match /tasks/{taskId}` ke dalam rules yang sudah ada.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidTitle(title) {
+      return title is string && title.size() >= 1 && title.size() <= 200;
+    }
+
+    match /tasks/{taskId} {
+      allow read: if true;
+
+      // Tambah: hanya field title, completed, createdAt (serverTimestamp)
+      allow create: if request.resource.data.keys().hasOnly(['title', 'completed', 'createdAt'])
+        && isValidTitle(request.resource.data.title)
+        && request.resource.data.completed == false
+        && request.resource.data.createdAt == request.time;
+
+      // Ubah: hanya title dan/atau completed
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['title', 'completed'])
+        && isValidTitle(request.resource.data.title)
+        && request.resource.data.completed is bool;
+
+      allow delete: if true;
+    }
+
+    // Selain itu ditolak
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

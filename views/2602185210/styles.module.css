@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.appShell {
+  min-height: 100vh;
+  color: #18221f;
+  background: #f6f8f5;
+  font-family: "DM Sans", sans-serif;
+}
+.topbar {
+  height: 76px;
+  padding: 0 max(6vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,.88);
+  border-bottom: 1px solid #e8ede8;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #18221f;
+  text-decoration: none;
+  font: 800 19px "Manrope", sans-serif;
+  letter-spacing: -.7px;
+}
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  color: white;
+  background: #246b50;
+}
+.brandAccent { color: #368763; }
+.studentBadge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #627069;
+  font-size: 12px;
+  font-weight: 600;
+}
+.statusDot { width: 7px; height: 7px; border-radius: 50%; background: #48a879; }
+.container { width: min(1120px, 88%); margin: 0 auto; padding: 54px 0 76px; }
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 36px;
+  align-items: center;
+  overflow: hidden;
+  padding: 54px;
+  border-radius: 25px;
+  color: white;
+  background: #173e32;
+}
+.eyebrow { margin: 0 0 13px; color: #6eaa8c; font-size: 10px; font-weight: 700; letter-spacing: 2px; }
+.hero h1, .sectionHeading h2, .detailTitle {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  letter-spacing: -1.7px;
+}
+.hero h1 { max-width: 540px; font-size: clamp(38px, 5vw, 58px); line-height: 1.1; }
+.hero h1 span { color: #8bd2a9; }
+.heroText { max-width: 480px; margin: 18px 0 25px; color: #c1d4ca; font-size: 14px; line-height: 1.8; }
+.primaryButton, .secondaryButton {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 17px;
+  color: #173e32;
+  background: #a5dfba;
+  font: 700 12px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+.primaryButton span { margin-left: 12px; }
+.heroCard {
+  position: relative;
+  min-height: 185px;
+  padding: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 18px;
+  background: rgba(255,255,255,.08);
+}
+.heroCardLabel, .heroCardCaption { position: relative; z-index: 1; display: block; color: #c2d9cc; font-size: 10px; letter-spacing: 1.2px; }
+.heroCard strong { position: relative; z-index: 1; display: block; margin: 12px 0 2px; font: 800 56px "Manrope", sans-serif; }
+.heroCardCaption { font-size: 11px; letter-spacing: 0; }
+.heroOrb { position: absolute; width: 170px; height: 170px; right: -55px; bottom: -90px; border-radius: 50%; background: #64a981; opacity: .35; }
+.contentSection { padding-top: 55px; }
+.sectionHeading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 23px; }
+.sectionHeading h2 { font-size: 29px; }
+.sectionHeading .eyebrow { margin-bottom: 7px; }
+.resultCount { color: #77847c; font-size: 12px; }
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 52px;
+  padding: 0 17px;
+  border: 1px solid #e3eae4;
+  border-radius: 12px;
+  background: white;
+  color: #789087;
+}
+.searchBox > span { font-size: 25px; }
+.searchBox input { width: 100%; border: 0; outline: 0; color: #24352d; background: transparent; font: 13px "DM Sans", sans-serif; }
+.clearButton { border: 0; color: #738078; background: transparent; font-size: 22px; cursor: pointer; }
+.postGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 22px; }
+.postCard {
+  display: flex;
+  min-height: 245px;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid #e8eee8;
+  border-radius: 15px;
+  background: white;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.postCard:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(28,61,43,.08); }
+.postMeta { display: flex; justify-content: space-between; color: #7a9c87; font-size: 9px; font-weight: 700; letter-spacing: 1.1px; }
+.postCard h3 { margin: 21px 0 10px; color: #23372c; font: 700 16px/1.45 "Manrope", sans-serif; text-transform: capitalize; }
+.postCard p { display: -webkit-box; overflow: hidden; margin: 0 0 20px; color: #78847d; font-size: 12px; line-height: 1.7; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.readMore { display: flex; justify-content: space-between; margin-top: auto; padding-top: 14px; border-top: 1px solid #edf1ed; color: #347b56; text-decoration: none; font-size: 11px; font-weight: 700; }
+.message, .errorBox { margin-top: 22px; padding: 28px; border-radius: 14px; background: white; color: #65746b; text-align: center; font-size: 13px; }
+.errorBox { border: 1px solid #f0d6d2; color: #9a443b; }
+.errorBox p { font-size: 12px; }
+.secondaryButton { color: white; background: #347b56; }
+.backLink { display: inline-block; margin-bottom: 25px; color: #347b56; text-decoration: none; font-size: 12px; font-weight: 700; }
+.detailCard { max-width: 820px; margin: 0 auto; padding: 42px; border: 1px solid #e7eee8; border-radius: 20px; background: white; }
+.detailCard .eyebrow { margin-top: 38px; }
+.detailTitle { color: #1c3528; font-size: clamp(30px, 5vw, 46px); line-height: 1.2; text-transform: capitalize; }
+.detailBody { margin: 25px 0 45px; color: #68766e; font-size: 16px; line-height: 2; text-transform: capitalize; }
+.detailFooter { display: flex; justify-content: space-between; padding-top: 18px; border-top: 1px solid #edf1ed; color: #839087; font-size: 11px; }
+.footer { padding: 23px; border-top: 1px solid #e8ede8; color: #8a968e; text-align: center; font-size: 10px; }
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding: 35px; }
+  .heroCard { min-height: 145px; }
+  .postGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .topbar { height: auto; min-height: 70px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding: 13px 6%; }
+  .studentBadge { font-size: 10px; }
+  .container { width: 90%; padding-top: 28px; }
+  .hero { padding: 28px 23px; border-radius: 18px; }
+  .hero h1 { font-size: 39px; }
+  .postGrid { grid-template-columns: 1fr; }
+  .sectionHeading h2 { font-size: 25px; }
+  .detailCard { padding: 25px; }
+  .detailFooter { gap: 12px; flex-direction: column; }
+}

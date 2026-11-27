@@ -500,12 +500,20 @@
         "favoriteLanguage": "JavaScript"
     }
   },
-   {
+  {
     "name": "Michelle Valencia Nurdi",
     "nim": "2501959775",
     "studyProgram": "Computer Science",
     "additionalData": {
         "favoriteLanguage": "Ruby"
+    }
+  },
+  {
+    "name": "Terrence Reinhardt Kanter",
+    "nim": "2602182581",
+    "studyProgram": "Computer Science",
+    "additionalData": {
+        "favoriteLanguage": "Javascript"
     }
   }
 ]
